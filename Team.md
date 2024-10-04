@@ -4,3 +4,5 @@
 | Annie Jhamb     | B       |------------|---------------------------|---------------------| annie034512      |
 | Jasmin Slootweg | B       |------------|---------------------------|---------------------| jazz20           |
 | Quoc Trong Dao  | B       |------------|---------------------------|---------------------| timothyquoctrong |
+
+Project Discord server invite link: https://discord.gg/PHvBxqYRfH
