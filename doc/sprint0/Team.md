@@ -3,6 +3,6 @@
 | Arjun Grewal    | B       | 219819614  | agrewal4@my.yorku.ca      | Discord             | agcompsci        |
 | Annie Jhamb     | B       |------------|---------------------------|---------------------| annie034512      |
 | Jasmin Slootweg | B       |------------|---------------------------|---------------------| jazz20           |
-| Quoc Trong Dao  | B       |------------|---------------------------|---------------------| timothyquoctrong |
+| Quoc Trong Dao  | B       | 219525690  | tim17@my.yorku.ca         | Discord             | timothyquoctrong |
 
 Project Discord server invite link: https://discord.gg/PHvBxqYRfH
