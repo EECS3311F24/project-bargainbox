@@ -1,5 +1,5 @@
 ### About/Opening Page:
-[About](https://github.com/EECS3311F24/project-bargainbox/tree/main/doc/sprint0/ux_images/About.png "About")
+[About](/ux_images/About.png "About")
 
 ### Listings Page:
 [Listings](https://github.com/EECS3311F24/project-bargainbox/tree/main/doc/sprint0/ux_images/listings.png "Listings")
