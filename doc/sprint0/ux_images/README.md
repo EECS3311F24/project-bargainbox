@@ -18,3 +18,7 @@ BargainBox was motivated by three different needs within the secondhand e-commer
 *Node.js and npm should be installed on the computer before running the above mentioned commands for the installation of Bargain Box.*
 
 Users will be able to access the website by looking up BargainBox in their web search browsers (Google, Bing, etc). By looking up BarainBox, users will be able to click the first link (BargainBox.com) and access our platform. 
+
+**CONTRIBUTION**
+
+The development of BargainBox was a collaborative effort, with each team member bringing unique skills and expertise to the project.
