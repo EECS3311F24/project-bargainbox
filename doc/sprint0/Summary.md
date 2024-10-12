@@ -12,6 +12,10 @@
   A buyer can communicate with the seller with a communication panel that is associated with each listing on our website. This allows the buyer to learn more about the quality of the product being sold, have potential negotiations with the seller, as well as determine a meeting place for where a transaction can take place.
 
 **Key Users / Target Audience:** The primary target audience is any adult individual (18 years or older) that wishes to conveniently sell their unwanted items or wish to purchase items from other community members. In particular, the key users consist of “Buyers” and “Sellers”. Furthermore, Buyers are individuals that wish to purchase products that have been posted by Sellers on our website application. In comparison, Sellers are the individuals who post their own items that they wish to sell to potential Buyers. 
+To be more precise, the key users include: 
+->Buyers looking for affordable and good-quality products.
+->Sellers aiming to declutter, earn money, or offer used items in good condition.
+->Small businesses who wish to sell excess inventory or second-hand products online. 
 
 **Key Use Cases (How Will Users Interact With our Ecommerce Website):** 
 
@@ -31,3 +35,10 @@
   * Note: Each seller must have an account (this is because there is a service commision fee charged per post made by the seller. This charge is shown on the user profile, where a flat rate of 10 cents is charged per post made).  
 * **Scenario 3 \- Buyer and Seller confirm that a transaction has been made and the Buyer is provided with the option to leave a review on the seller**  
   * Note: Cash must be paid upfront at a mutually agreed upon location decided by the buyer and seller.
+ 
+**Principles:**
+1. **User- Centered Design:** Bargain Box is designed while keeping the user's needs and requirements in mind. The layout and instructions displayed makes it easier for the user to grasp on the features being offered. 
+
+2. **Transparency amongst the buyers and sellers:** Bargain Box provides full rights for buyers to check the sellers listings and reputation(feedback) before making a decision which increases trust.
+
+3. **Security:** A safe environment is provided the users to make transactions. Bargain Box provides secure payment methods to build trust and to make both the buyers and sellers feel safe.
