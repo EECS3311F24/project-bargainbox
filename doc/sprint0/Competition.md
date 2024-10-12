@@ -22,4 +22,8 @@ There are numerous companies that have the same objective to combine both conven
 * Kijiji: [https://www.kijiji.ca/](https://www.kijiji.ca/)   
 * Autotrader: [https://www.autotrader.ca/](https://www.autotrader.ca/)   
 * Karrot: [https://karrotmarket.com](https://karrotmarket.com)   
-* Craigslist: [https://www.craigslist.org](https://www.craigslist.org) 
+* Craigslist: [https://www.craigslist.org](https://www.craigslist.org)
+
+# Additonal notes:
+* Our users are people and small communities such as the Greater Toronto Area, as BargainBox is designed specifically to serve them. Users can view specific reviews of each seller to determine if they want to trade with them. Sellers can post their products for low fees and have them stay on the website until they choose to delete them.
+* Our competitors allow free posting but do not cater towards users and do not allow duplicates on their site, and they have sellers selling fake products or counterfeit items. This is because their sites are big and they want to serve as many people as they can in many different cities or countries, whereas we only serve people and small communities. They can take a fee for postings on their site and allow similar products to be listed, and the Greater Toronto area to have many users on their site so they will focus on serving them.
