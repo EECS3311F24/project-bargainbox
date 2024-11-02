@@ -9,3 +9,4 @@ app/pyvenv.cfg
 app/Scripts
 app/Include
 app/Lib
+app/bargain_box/db.sqlite3
