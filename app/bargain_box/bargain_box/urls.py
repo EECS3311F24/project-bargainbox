@@ -20,12 +20,19 @@ from home import views as home_views
 from user_authentication import views as user_authentication_views
 from users import views as user_views
 
+from django.contrib.auth import views as auth_views
+
 urlpatterns = [
     path('', home_views.home_page, name = 'home'),
     path('register/', user_views.register, name='register'),
+   
     path('register/', user_authentication_views.user_account_registration, name = 'register'),
-    path('signin/', user_authentication_views.user_account_signin, name = 'signin'),
-    path('signout/', user_authentication_views.user_account_signout, name = 'signout'),
+
+
+    path('signin/', auth_views.LoginView.as_view(template_name = 'user_authentication/signin.html'), name = 'signin'),
+    #path('signout/', auth_views.LogoutView.as_view(template_name = 'user_authentication/signout.html'), name = 'signout'),
+    path("signout/", user_authentication_views.user_account_signout, name = 'signout'),
+   
     path('my-profile/', include('user_profile.urls')),
     path('admin/', admin.site.urls, name = 'admin')
 ]
