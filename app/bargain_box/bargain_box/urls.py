@@ -20,6 +20,8 @@ from home import views as home_views
 from user_authentication import views as user_authentication_views
 from users import views as user_views
 
+from django.contrib.auth import views as auth_views
+
 urlpatterns = [
     path('', home_views.home_page, name = 'home'),
     path('register/', user_views.register, name='register'),
