@@ -23,3 +23,27 @@ We will try to commit to learning the framework from reading tutorials and docum
 We think that we will be able to finish it by October 31\.  
 4\. Do you have any blockers?  
 Our blocker is everyone in our group is new to the framework and need some time to familiarize themselves with it.
+
+**Standup 3**
+
+\[October 31, 2024\] \- Sprint 3 Standup 3  
+1\. What did you work on since the last standup?  
+We were working on practicing on following some of the tutorials from the last meeting to familiarize ourselves with the coding environment before starting to work on the features for our platform
+2\. What do you commit to next?   
+We commit to start working on the sign up feature for our website.  
+3\. When do you think you’ll be done?  
+We think that we will be done by November 2\.  
+4\. Do you have any blockers?  
+Our blocker is that some of the features might depend on the other for testing (e.g. the login feature requires the registration feature to be completed correctly first).
+
+**Standup 4**
+
+\[November 2, 2024\] \- Sprint 4 Standup 4  
+1\. What did you work on since the last standup?  
+We were working on creating the signup and base template for our website.
+2\. What do you commit to next?   
+We will try to commit to making a login/logout system, and allowing users to view their profile and edit their information.  
+3\. When do you think you’ll be done?  
+We think we will finish them by November 3\.  
+4\. Do you have any blockers?  
+Our blocker is that some features are dependent on each other and we have to wait for one person to finish before the other can start (our view and edit profile features).
