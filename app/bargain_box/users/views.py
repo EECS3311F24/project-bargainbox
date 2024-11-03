@@ -18,17 +18,25 @@ def register(request):
 
 
 @login_required
-def profiel(request):
-    u_form = UserUpdateForm()
-    p_form = ProfileUpdateForm()
-
-    context = {
+def profile(request):
+    u_form = UserUpdateForm(request.POST, instance=request.user)
+    p_form = ProfileUpdateForm(request.POST, request.FILES, instance =request.user.view_profile)
+    
+    if u_form.is_valid() and p_form.is_valid():
+        u_form.save()
+        p_form.save()
+        messages.success(request, f'Your profile has been updated {username}!')
+        return redirect('home')
+        
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance =request.user.view_profile)
+    
+context = {
         'u_form': u_form,
         'p_form': p_form
-    }
+}
 
-    return render (request,'user_profile/view_profile.html',context)
-
-
+return render (request, 'users/view_profile.html',context)
 
     
