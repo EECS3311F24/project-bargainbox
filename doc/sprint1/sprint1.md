@@ -14,21 +14,17 @@ The objective of Sprint 1 is to develop a fully functional Account System that i
 ## Sprint Spikes (Research/Learning Tasks)
 To achieve our sprint goal, we need to research and learn the following:
 
-1. **Connecting Individual Components:**
-   - Learn how to link the Sign-in page to the Homepage and ensure the user profile page is accessible only to signed-in users.
-   - Explore tutorials on integrating different components in a Django-based application.
+1. How to connect our individual tasks and components together (will probably have to look at some tutorials)
+For example, how to link the Sign in page to the Homepage as well as connecting the user profile page to users who are signed in only
 
-2. **Database Testing and Modifications:**
-   - Research how to test and manage database connections to ensure login/logout functionality works correctly.
-   - Ensure username and password validation matches the entries in the database.
+2. Learning how to test and modify the database to ensure that the login and logout systems work correctly
+For example, the username and password must be an exact match to an existing set of username and password recorded within the database
 
-3. **Registration System Validations:**
-   - Learn how to enforce unique username validation, valid email format checks, and strong password requirements.
-   - Prevent duplicate account creation with the same username.
+3. Learning to make sure that the registration system correctly checks if a new account cannot be made due to either a username already existing, and invalid email address, or an invalid password
+For example, two customers both cannot have “John Smith” as their username
 
-4. **User Profile Management:**
-   - Understand how to create, display, and update user profiles.
-   - Ensure only authenticated users can update their profiles.
+4. Learning how to add a user profile and update it for each individual client that is registered to our website.
+For example, only signed in users will be able to update the user profile page.
 
 ---
 
