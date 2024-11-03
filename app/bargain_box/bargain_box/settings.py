@@ -130,6 +130,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#Redirect the signed out user to sign in page before they can access certain pages
+LOGIN_URL = 'signin'
 
 ################################# Used to Redirect Onced Signed In
 LOGIN_REDIRECT_URL = 'home'

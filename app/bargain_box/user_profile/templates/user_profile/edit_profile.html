@@ -1,6 +1,15 @@
 {% extends "home/foundation.html" %}
-
 {% block content %}
-    <h1>EDIT PROFILE PAGE</h1>
-    <!--write your code here-->
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Edit profile</legend>
+                {{ form.as_p }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
 {% endblock content %}
