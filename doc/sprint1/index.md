@@ -8,3 +8,5 @@ Welcome to the project documentation!
 - [Release Planning Meeting](RPM.md)
 - [SR1](SR1.md)
 - [Sprint 1 Planning](sprint1.md)
+- [Troubleshooting](troubleshooting.md)
+  
