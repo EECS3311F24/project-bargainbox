@@ -29,7 +29,7 @@ The aim of our project is to create a safe, functional and user friendly environ
 - Michael Favret :  217369497
 - Jasmin Slootweg :  219437151
 - Arjun Grewal  : 219819614
-= Quoc Trong Dao  :  219525690
+- Quoc Trong Dao  :  219525690
 
   
 ## Meeting Notes
