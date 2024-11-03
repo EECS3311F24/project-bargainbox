@@ -2,8 +2,7 @@
 
 {% block content %}
     <div class="d-flex justify-content-between">
-        <h1>VIEW PROFILE PAGE</h1>
-        <h3><a href="{% url 'edit-profile' %}">Edit Profile</a></h3>
+        <h1>My profile</h1>
     </div>
 
     <div class="container">
@@ -11,9 +10,7 @@
             <!--Keep these 2 tags on same line-->
             <h3>Hello,<h3 style="color:red">{{ user.username }}</h3></h3>
         </div>
-        <p>Email: {{ user.email }}</p>
+        <p>Email: {{ user.email }}</p> 
+        <a href="{% url 'edit-profile' %}">Edit profile</a>
     </div>
-
-
-
 {% endblock content %}
