@@ -28,7 +28,7 @@ class PostDetailView(DetailView):
 # this is our class based view for creating a post
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['title', 'content', 'location', 'quantity', 'price']
+    fields = ['title', 'content', 'location', 'quantity', 'price', 'image']
 
     # sets the author
     def form_valid(self, form):
