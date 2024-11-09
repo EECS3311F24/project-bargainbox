@@ -22,15 +22,15 @@ from users import views as user_views
 
 from django.contrib.auth import views as auth_views
 
-from home.views import PostListView, PostDetailView, PostCreateView # updated
 from django.conf import settings   # added for pictures
 from django.conf.urls.static import static # added for pictures
+from post.views import PostListView # Displaying all posts in home
 
 urlpatterns = [
-    path('', home_views.PostListView.as_view(), name = 'home'), # updated
-    path('post/<int:pk>/', home_views.PostDetailView.as_view(), name = 'post-detail'), # added for detailed view
-    path('post/new/', home_views.PostCreateView.as_view(), name = 'post-create'), # added for post creation view
+    path('', PostListView.as_view(), name = 'home'), # Displaying all posts in home
 
+    path('post/', include("post.urls")),
+    
     path('register/', user_views.register, name='register'),
     path('register/', user_authentication_views.user_account_registration, name = 'register'),
 
