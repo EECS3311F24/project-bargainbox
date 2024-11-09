@@ -20,12 +20,26 @@ from home import views as home_views
 from user_authentication import views as user_authentication_views
 from users import views as user_views
 
+from django.contrib.auth import views as auth_views
+
+from home.views import PostListView, PostDetailView, PostCreateView # updated
+from django.conf import settings   # added for pictures
+from django.conf.urls.static import static # added for pictures
+
 urlpatterns = [
-    path('', home_views.home_page, name = 'home'),
+    path('', home_views.PostListView.as_view(), name = 'home'), # updated
+    path('post/<int:pk>/', home_views.PostDetailView.as_view(), name = 'post-detail'), # added for detailed view
+    path('post/new/', home_views.PostCreateView.as_view(), name = 'post-create'), # added for post creation view
+
     path('register/', user_views.register, name='register'),
     path('register/', user_authentication_views.user_account_registration, name = 'register'),
-    path('signin/', user_authentication_views.user_account_signin, name = 'signin'),
-    path('signout/', user_authentication_views.user_account_signout, name = 'signout'),
+
+    path('signin/', auth_views.LoginView.as_view(template_name = 'user_authentication/signin.html'), name = 'signin'),
+    path("signout/", user_authentication_views.user_account_signout, name = 'signout'),
+   
     path('my-profile/', include('user_profile.urls')),
     path('admin/', admin.site.urls, name = 'admin')
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
