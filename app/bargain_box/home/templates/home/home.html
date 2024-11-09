@@ -1,5 +1,6 @@
 {% extends "home/foundation.html" %}
 
+
 {% block content %}
     {% for post in posts %}
         <article class="post content-section" style="border: 2px solid #ccc; padding: 20px; margin-bottom: 20px; border-radius: 5px; background-color: #f0d29cfa;">
@@ -8,18 +9,18 @@
                     <a class="mr-2" href="#">{{post.author.username}}</a>
                     <small class="text-muted">{{post.date_posted|date:"F d, Y"}}</small>
                 </div>
-                <h2 class="post-title" 
+                <h2 class="post-title"
                     style=
                     "
-                        font-size: 2rem; 
-                        font-weight: bold; 
-                        color: #333; 
-                        margin-bottom: 10px; 
-                        text-transform: uppercase; 
-                        letter-spacing: 1px; 
+                        font-size: 2rem;
+                        font-weight: bold;
+                        color: #333;
+                        margin-bottom: 10px;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
                         position: relative;
                     ">
-                    <a href="#" style="color: #333; text-decoration: none; transition: all 0.3s ease-in-out;">
+                    <a href="{% url 'post-detail' post.id %}" style="color: #333; text-decoration: none; transition: all 0.3s ease-in-out;">
                         <span style="position: relative;">
                             <span style="font-size: 1.5rem; color: #db250d; margin-right: 10px;">🍁</span>
                             {{post.title}}
@@ -31,6 +32,6 @@
                 <p class="post-quantity"><strong>Quantity:</strong> {{post.quantity}}</p>
                 <p class="post-price"><strong>Price:</strong> ${{ post.price }}</p>
             </div>
-        </article>     
+        </article>    
     {% endfor %}
 {% endblock content %}

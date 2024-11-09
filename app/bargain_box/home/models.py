@@ -4,10 +4,11 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
+from django.urls import reverse
+
 # Create your models here.
 
-# Note: Each class will be its own table in the database
-
+# attributes for Post
 class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
@@ -19,3 +20,7 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    # So that user is redirected to homepage once post is created
+    def get_absolute_url(self):
+        return reverse('home')
