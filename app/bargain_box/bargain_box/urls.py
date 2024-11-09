@@ -23,6 +23,8 @@ from users import views as user_views
 from django.contrib.auth import views as auth_views
 
 from home.views import PostListView, PostDetailView, PostCreateView # updated
+from django.conf import settings   # added for pictures
+from django.conf.urls.static import static # added for pictures
 
 urlpatterns = [
     path('', home_views.PostListView.as_view(), name = 'home'), # updated
@@ -38,3 +40,6 @@ urlpatterns = [
     path('my-profile/', include('user_profile.urls')),
     path('admin/', admin.site.urls, name = 'admin')
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

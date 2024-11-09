@@ -31,6 +31,9 @@
                 <p class="post-location"><strong>Location:</strong> {{post.location}}</p>
                 <p class="post-quantity"><strong>Quantity:</strong> {{post.quantity}}</p>
                 <p class="post-price"><strong>Price:</strong> ${{ post.price }}</p>
+                {% if post.image %}
+                    <img src="{{post.image.url}}" alt="{{post.title}}" style="max-width: 50px; height: auto">
+                {% endif %}
             </div>
         </article>    
     {% endfor %}
