@@ -3,24 +3,16 @@
 
 {% block content %}
 <div class="container">
-    <h1 class="text-center display-4">
-        Detailed Listing of <span style="color:red">{{ post.title }}</span>
-    </h1>
+    <h1 class="text-center display-4">Detailed Listing of <span style="color:red">{{ post.title }}</span></h1>
 </div>
 
-<h2 class="text-center">
-    Date posted: {{ post.date_posted }}
-</h2>
-<h2 class="text-center">
-    by <a href="#">{{ post.author }}</a>
-</h2>
+<h2 class="text-center">Date posted: {{ post.date_posted }}</h2>
+<h2 class="text-center">by <a href="#">{{ post.author }}</a></h2>
 
 {% if post.image %}
     <div class="text-center">
         <a href="{{ post.image.url }}">
-            <img src="{{ post.image.url }}" 
-            alt="{{ post.title }}" 
-            class="img-fluid" style="max-width: 400px; max-height: 400px;">
+            <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid" style="max-width: 400px; max-height: 400px;">
         </a>
     </div>
 {% endif %}
