@@ -2,95 +2,40 @@
 
 
 {% block content %}
- <div class="content-section">
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Edit Post</legend>
-            
-            <!-- Post Title -->
-            <div class="form-group">
-                <label for="{{ form.title.id_for_label }}">Post Title</label>
-                <input type="text" name="title" class="form-control" id="{{ form.title.id_for_label }}" value="{{ form.title.value|default_if_none:'' }}">
-                {% if form.title.errors %}
-                    <div class="alert alert-danger">
-                        {% for error in form.title.errors %}
-                            <p>{{ error }}</p>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            </div>
-            
-            <!-- Content/Description -->
-            <div class="form-group">
-                <label for="{{ form.content.id_for_label }}">Content/Description</label>
-                <textarea name="content" class="form-control" id="{{ form.content.id_for_label }}">{{ form.content.value|default_if_none:'' }}</textarea>
-                {% if form.content.errors %}
-                    <div class="alert alert-danger">
-                        {% for error in form.content.errors %}
-                            <p>{{ error }}</p>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            </div>
-            
-            <!-- Location -->
-            <div class="form-group">
-                <label for="{{ form.location.id_for_label }}">Location</label>
-                <input type="text" name="location" class="form-control" id="{{ form.location.id_for_label }}" value="{{ form.location.value|default_if_none:'' }}">
-                {% if form.location.errors %}
-                    <div class="alert alert-danger">
-                        {% for error in form.location.errors %}
-                            <p>{{ error }}</p>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            </div>
-            
-            <!-- Quantity -->
-            <div class="form-group">
-                <label for="{{ form.quantity.id_for_label }}">Quantity</label>
-                <input type="number" name="quantity" class="form-control" id="{{ form.quantity.id_for_label }}" value="{{ form.quantity.value|default_if_none:'' }}">
-                {% if form.quantity.errors %}
-                    <div class="alert alert-danger">
-                        {% for error in form.quantity.errors %}
-                            <p>{{ error }}</p>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            </div>
-            
-            <!-- Price -->
-            <div class="form-group">
-                <label for="{{ form.price.id_for_label }}">Price</label>
-                <input type="number" step="0.01" name="price" class="form-control" id="{{ form.price.id_for_label }}" value="{{ form.price.value|default_if_none:'' }}">
-                {% if form.price.errors %}
-                    <div class="alert alert-danger">
-                        {% for error in form.price.errors %}
-                            <p>{{ error }}</p>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            </div>
-            
-            <!-- Image -->
-            <div class="form-group">
-                <label for="{{ form.image.id_for_label }}">Post Image</label>
-                <input type="file" name="image" class="form-control" id="{{ form.image.id_for_label }}">
-                {% if form.image.errors %}
-                    <div class="alert alert-danger">
-                        {% for error in form.image.errors %}
-                            <p>{{ error }}</p>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            </div>
-        </fieldset>
-        
-        <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">Save Changes</button>
-        </div>
-    </form>
+<div class="container">
+    <h1 class="text-center display-4">
+        Detailed Listing of <span style="color:red">{{ post.title }}</span>
+    </h1>
+</div>
+
+<h2 class="text-center">
+    Date posted: {{ post.date_posted }}
+</h2>
+<h2 class="text-center">
+    by <a href="#">{{ post.author }}</a>
+</h2>
+
+{% if post.image %}
+    <div class="text-center">
+        <a href="{{ post.image.url }}">
+            <img src="{{ post.image.url }}" 
+            alt="{{ post.title }}" 
+            class="img-fluid" style="max-width: 400px; max-height: 400px;">
+        </a>
+    </div>
+{% endif %}
+
+<br>
+
+<div class="container align-items-center justify-content-center">
+    <h3>Description: {{ post.content }}</h3>
+    <h3>Location: {{ post.location }}</h3>
+    <h3>Quantity: {{ post.quantity }}</h3>
+    <h3>Price: {{ post.price }}</h3>
+</div>
+
+<!-- Add the link to the edit page -->
+<div class="text-center">
+    <a href="{% url 'post-edit' post.pk %}" class="btn btn-outline-warning">Edit Post</a>
 </div>
 {% endblock content %}
