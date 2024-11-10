@@ -22,17 +22,24 @@ from users import views as user_views
 
 from django.contrib.auth import views as auth_views
 
+from django.conf import settings   # added for pictures
+from django.conf.urls.static import static # added for pictures
+from post.views import PostListView # Displaying all posts in home
+
 urlpatterns = [
-    path('', home_views.home_page, name = 'home'),
+    path('', PostListView.as_view(), name = 'home'), # Displaying all posts in home
+
+    path('post/', include("post.urls")),
+    
     path('register/', user_views.register, name='register'),
-   
     path('register/', user_authentication_views.user_account_registration, name = 'register'),
 
-
     path('signin/', auth_views.LoginView.as_view(template_name = 'user_authentication/signin.html'), name = 'signin'),
-    #path('signout/', auth_views.LogoutView.as_view(template_name = 'user_authentication/signout.html'), name = 'signout'),
     path("signout/", user_authentication_views.user_account_signout, name = 'signout'),
    
     path('my-profile/', include('user_profile.urls')),
     path('admin/', admin.site.urls, name = 'admin')
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -11,3 +11,9 @@ app/Include
 app/Lib
 app/bargain_box/db.sqlite3
 .vscode
+app/bargain_box/bargain_box/__pycache__
+app/bargain_box/home/__pycache__
+app/bargain_box/post/__pycache__
+app/bargain_box/user_authentication/__pycache__
+app/bargain_box/user_profile/__pycache__
+app/bargain_box/users/__pycache__
