@@ -32,12 +32,10 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     
 
 # this is our class based view for editting individual post
-class PostEditView(UpdateView):
-    model = Post
-    template_name = "post/post_edit.html"
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
+    template_name = "post/post_edit.html"
     fields = ['title', 'content', 'location', 'quantity', 'price', 'image']
 
     # sets the author
