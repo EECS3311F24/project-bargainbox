@@ -4,7 +4,7 @@ from django.shortcuts import render
 # import added
 from .models import Post
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
 # this is our class based view for listing all posts
@@ -35,3 +35,18 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 class PostEditView(UpdateView):
     model = Post
     template_name = "post/post_edit.html"
+
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Post
+    fields = ['title', 'content', 'location', 'quantity', 'price', 'image']
+
+    # sets the author
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)    
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author: #checks if the current user is the author of the post!
+            return True
+        return False 
