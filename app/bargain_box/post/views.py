@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 # import added
 from .models import Post
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
@@ -17,6 +17,8 @@ class PostListView(ListView):
 # this is our class based view for detailed view of an individual post
 class PostDetailView(DetailView):
     model = Post
+    template_name = "post/post_detail.html"
+
 
 # this is our class based view for creating a post
 class PostCreateView(LoginRequiredMixin, CreateView):
@@ -27,3 +29,9 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+    
+
+# this is our class based view for editting individual post
+class PostEditView(UpdateView):
+    model = Post
+    template_name = "post/post_edit.html"
