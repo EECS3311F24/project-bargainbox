@@ -1,12 +1,15 @@
 {% extends "home/foundation.html" %}
-
+{% load static %}
 
 {% block content %}
-    <div class="search-section" style="margin-bottom: 30px;">
+    <div class="search-section" style= "margin-bottom: 30px; background-image: url('{% static 'bargain_box/background.png' %}'); background-size:cover; padding: 50px 0; text-align: center;">
+        <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 30px; color: #FFFFFF;">
+            Find a Bargain for Something you Love
+        </h1>
         <form method="get" action="{% url 'home' %}" style="display: flex; justify-content: center;">
             <input type="text" name="q" placeholder="Type Here to Search for Posts!" value="{{request.GET.q}}"
                 style="padding: 10px; width: 300px; font-size: 1rem; border: 1px solid #030303fa; border-radius: 0px;"/>
-            <button type="submit" style="padding: 10px; background-color: #db250d; color: rgb(247, 247, 244); border: none; border-radius: 0px; cursor: pointer;">
+            <button type="submit" style="padding: 10px; background-color: rgb(43, 114, 74); color: rgb(247, 247, 244); border: none; border-radius: 0px; cursor: pointer;">
                 Search
             </button>
         </form>
