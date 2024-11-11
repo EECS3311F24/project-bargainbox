@@ -52,7 +52,7 @@ The following were the goals of the meeting held on November 5th, 2024:
 *Each member of the team was assigned with specific tasks. Apart from their personal assignments, everyone stepped in to help each other in overcoming any issues. Here's a list of the tasks that each member completed-*
 
 1. Arjun Grewal
-   - View a Listing in Detail
+   - Create Listing, Add Picture to Listing, View All Posts on Homepage, and Search Functionality To View Specific Posts (By Title and/or Location)
 
 2. Annie Jhamb
    - Edit Listing
@@ -64,4 +64,4 @@ The following were the goals of the meeting held on November 5th, 2024:
    - Delete profile, Add profile picture, and Update profile picture
 
 5. Quoc Trong Dao
-   - Create Listing 
+   - View a Listing in Detail
