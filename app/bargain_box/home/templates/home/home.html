@@ -2,39 +2,67 @@
 
 
 {% block content %}
-    {% for post in posts %}
-        <article class="post content-section" style="border: 2px solid #ccc; padding: 20px; margin-bottom: 20px; border-radius: 5px; background-color: #f0d29cfa;">
-            <div class="post-body">
-                <div class="post-metadate">
-                    <a class="mr-2" href="#">{{post.author.username}}</a>
-                    <small class="text-muted">{{post.date_posted|date:"F d, Y"}}</small>
+    <div class="search-section" style="margin-bottom: 30px;">
+        <form method="get" action="{% url 'home' %}" style="display: flex; justify-content: center;">
+            <input type="text" name="q" placeholder="Type Here to Search for Posts!" value="{{request.GET.q}}"
+                style="padding: 10px; width: 300px; font-size: 1rem; border: 1px solid #030303fa; border-radius: 0px;"/>
+            <button type="submit" style="padding: 10px; background-color: #db250d; color: rgb(247, 247, 244); border: none; border-radius: 0px; cursor: pointer;">
+                Search
+            </button>
+        </form>
+    </div>
+    {% if request.GET.q %}
+        <div class="search-results-message" style="text-align: center; margin-bottom: 20px;">
+            <p><strong>Search results for: "{{request.GET.q}}"</strong></p>
+            <p>{{posts.count}} results found.</p>
+        </div>
+    {% endif %}
+    {% if posts %}
+        {% for post in posts %}
+            <article class="post content-section" style="border: 2px solid #ccc; padding: 20px; margin-bottom: 20px; border-radius: 5px; background-color: #f0d29cfa;">
+                <div class="post-body">
+                    <div class="post-metadate">
+                        <a class="mr-2" href="#">{{post.author.username}}</a>
+                        <small class="text-muted">{{post.date_posted|date:"F d, Y"}}</small>
+                    </div>
+                    <h2 class="post-title"
+                        style=
+                        "
+                            font-size: 2rem;
+                            font-weight: bold;
+                            color: #333;
+                            margin-bottom: 10px;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            position: relative;
+                        ">
+                        <a href="{% url 'post-detail' post.id %}" style="color: #333; text-decoration: none; transition: all 0.3s ease-in-out;">
+                            <span style="position: relative;">
+                                <span style="font-size: 1.5rem; color: #db250d; margin-right: 10px;">🍁</span>
+                                {{post.title}}
+                            </span>
+                        </a>
+                    </h2>
+                    <p class="post-content">{{post.content}}</p>
+                    <p class="post-location"><strong>Location:</strong> {{post.location}}</p>
+                    <p class="post-quantity"><strong>Quantity:</strong> {{post.quantity}}</p>
+                    <p class="post-price"><strong>Price:</strong> ${{ post.price }}</p>
+                    {% if post.image %}
+                        <img src="{{post.image.url}}" alt="{{post.title}}" style="max-width: 50px; height: auto">
+                    {% endif %}
                 </div>
-                <h2 class="post-title"
-                    style=
-                    "
-                        font-size: 2rem;
-                        font-weight: bold;
-                        color: #333;
-                        margin-bottom: 10px;
-                        text-transform: uppercase;
-                        letter-spacing: 1px;
-                        position: relative;
-                    ">
-                    <a href="{% url 'post-detail' post.id %}" style="color: #333; text-decoration: none; transition: all 0.3s ease-in-out;">
-                        <span style="position: relative;">
-                            <span style="font-size: 1.5rem; color: #db250d; margin-right: 10px;">🍁</span>
-                            {{post.title}}
-                        </span>
-                    </a>
-                </h2>
-                <p class="post-content">{{post.content}}</p>
-                <p class="post-location"><strong>Location:</strong> {{post.location}}</p>
-                <p class="post-quantity"><strong>Quantity:</strong> {{post.quantity}}</p>
-                <p class="post-price"><strong>Price:</strong> ${{ post.price }}</p>
-                {% if post.image %}
-                    <img src="{{post.image.url}}" alt="{{post.title}}" style="max-width: 50px; height: auto">
-                {% endif %}
-            </div>
-        </article>    
-    {% endfor %}
+            </article>    
+        {% endfor %}
+    {% else %}
+        <div class="no-posts-found">
+            <strong>No posts were found. Please search for something else!</strong>
+        </div>
+        <style>
+            .no-posts-found
+            {
+                text-align: center;
+            }
+        </style>
+    {% endif %}
+
 {% endblock content %}
