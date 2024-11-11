@@ -29,10 +29,11 @@
                             <li><a href="#">Categories</a></li>
                             <li><a href="{% url 'post-create' %}">Post</a></li>
                             {% if user.is_authenticated %}
+                            <li><a href="{% url 'view-posts' %}">My listings</a></li>
                             <li><a href="{% url 'view-profile' %}">My profile</a></li>
-                            <li><a href="{% url 'signout' %}">Sign Out</a></li>
+                            <li><a href="{% url 'signout' %}">Sign out</a></li>
                             {% else %}
-                            <li><a href="{% url 'signin' %}">Sign In</a></li>
+                            <li><a href="{% url 'signin' %}">Sign in</a></li>
                             <li><a href="{% url 'register' %}">Register</a></li>
                             {% endif %}
                         </ul>
