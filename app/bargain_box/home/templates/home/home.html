@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <div class="search-section" style= "margin-bottom: 30px; background-size:cover; padding: 50px 0; text-align: center; background-image: url('{% static 'bargain_box/background.png' %}');">
+    <div class="search-section" style= "margin-bottom: 30px; background-size:cover; padding: 50px 0; text-align: center; background-color: #0a4a19;">
         <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 30px; color: #FFFFFF;">
             Find a Bargain for Something you Love
         </h1>
@@ -21,8 +21,9 @@
         </div>
     {% endif %}
     {% if posts %}
+    <div class="post-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px;">
         {% for post in posts %}
-            <article class="post content-section" style="border: 2px solid #ccc; padding: 20px; margin-bottom: 20px; border-radius: 5px; background-color: #f0d29cfa;">
+            <article class="post content-section" style="border: 2px solid #ccc; padding: 20px; margin-bottom: 20px; border-radius: 5px; background-color: #bfbbb2;">
                 <div class="post-body">
                     <div class="post-metadate">
                         <a class="mr-2" href="#">{{post.author.username}}</a>
@@ -41,7 +42,7 @@
                         ">
                         <a href="{% url 'post-detail' post.id %}" style="color: #333; text-decoration: none; transition: all 0.3s ease-in-out;">
                             <span style="position: relative;">
-                                <span style="font-size: 1.5rem; color: #db250d; margin-right: 10px;">🍁</span>
+                                <span style="font-size: 1.5rem; color: #db250d; margin-right: 10px;">🌿</span>
                                 {{post.title}}
                             </span>
                         </a>
@@ -56,6 +57,7 @@
                 </div>
             </article>    
         {% endfor %}
+    </div>
     {% else %}
         <div class="no-posts-found">
             <strong>No posts were found. Please search for something else!</strong>

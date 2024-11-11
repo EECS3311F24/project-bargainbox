@@ -8,7 +8,7 @@
         <div class="row">
             {% for post in user_posts %}
                 <div class="col-md-6 mb-4">
-                    <div class="card">
+                    <div class="card" style="background-color: rgb(255, 255, 255);">
                         <div class="card-body">
                             <h3 class="card-title">
                                 <a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a>
