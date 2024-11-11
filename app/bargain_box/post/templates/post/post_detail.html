@@ -1,5 +1,48 @@
 {% extends "home/foundation.html" %}
 
+
 {% block content %}
-<h1>This is The Separate Page For Post Detailed View</h1>
+<div class="container">
+    <h1 class="text-center display-4">
+        Detailed Listing of <span style="color:red">{{ post.title }}</span>
+
+        {% comment %}
+        Again since there is mismatch in the model so I didn't configure for you right away Annie
+        but feel free to delete these comemnts and make your own url, Timothy 
+        
+        <span style="font-size:0.5em"><a href="{% url 'post-edit' post.pk %}">Edit</a></span>
+        {% endcomment %}
+
+        <span style="font-size:0.5em"><a href="#">Edit</a></span>
+    </h1>
+</div>
+
+<h2 class="text-center">
+    Date posted: {{ post.date_posted }}
+</h2>
+<h2 class="text-center">
+    <!-- by <a href="{% url 'view-profile' %}">{{ post.author }}</a> -->
+    by <a href="#">{{ post.author }}</a>
+</h2>
+
+{% if post.image %}
+    <div class="text-center">
+        <a href="{{ post.image.url }}">
+            <img src="{{ post.image.url }}" 
+            alt="{{ post.title }}" 
+            class="img-fluid" style="max-width: 400px; max-height: 400px;">
+        </a>
+    </div>
+{% endif %}
+
+<br>
+
+<div class="container align-items-center justify-content-center">
+    <h3>Description: {{ post.content }}</h3>
+    <h3>Location: {{ post.location }}</h3>
+    <h3>Quantity: {{ post.quantity }}</h3>
+    <h3>Price: {{ post.price }}</h3>
+</div>
+
 {% endblock content %}
+
