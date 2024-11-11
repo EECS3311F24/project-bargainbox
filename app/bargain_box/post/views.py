@@ -5,7 +5,7 @@ from django.shortcuts import render
 from .models import Post
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-
+from django.db.models import Q
 
 # this is our class based view for listing all posts
 class PostListView(ListView):
@@ -13,6 +13,16 @@ class PostListView(ListView):
     template_name = 'home/home.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        search_query = self.request.GET.get('q', None)
+        if search_query:
+            queryset = queryset.filter(
+                Q(title__icontains=search_query) |
+                Q(location__icontains=search_query)
+            )
+        return queryset
 
 # this is our class based view for detailed view of an individual post
 class PostDetailView(DetailView):

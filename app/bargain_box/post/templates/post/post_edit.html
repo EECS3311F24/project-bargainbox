@@ -6,28 +6,38 @@
     <h1 class="text-center display-4">Detailed Listing of <span style="color:red">{{ post.title }}</span></h1>
 </div>
 
-<h2 class="text-center">Date posted: {{ post.date_posted }}</h2>
-<h2 class="text-center">by <a href="#">{{ post.author }}</a></h2>
 
-{% if post.image %}
-    <div class="text-center">
-        <a href="{{ post.image.url }}">
-            <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid" style="max-width: 400px; max-height: 400px;">
-        </a>
+<!--Form to Edit the Post -->
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="id_title">Title:</label>
+        {{ form.title }}
     </div>
-{% endif %}
-
+    <div class="form-group">
+        <label for="id_content">Description:</label>
+        {{ form.content }}
+    </div>
+    <div class="form-group">
+        <label for="id_location">Location:</label>
+        {{ form.location }}
+    </div>
+    <div class="form-group">
+        <label for="id_quantity">Quantity:</label>
+        {{ form.quantity }}
+    </div>
+    <div class="form-group">
+        <label for="id_price">Price:</label>
+        {{ form.price }}
+    </div>
+    <div class="form-group">
+        <label for="id_image">Image:</label>
+        {{ form.image }}   
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
 <br>
 
-<div class="container align-items-center justify-content-center">
-    <h3>Description: {{ post.content }}</h3>
-    <h3>Location: {{ post.location }}</h3>
-    <h3>Quantity: {{ post.quantity }}</h3>
-    <h3>Price: {{ post.price }}</h3>
-</div>
 
-<!-- Add the link to the edit page -->
-<div class="text-center">
-    <a href="{% url 'post-edit' post.pk %}" class="btn btn-outline-warning">Edit Post</a>
-</div>
 {% endblock content %}
