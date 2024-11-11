@@ -37,6 +37,7 @@ urlpatterns = [
    
     path('my-profile/', include('user_profile.urls')),
     path('my-posts/', include('user_posts.urls')),
+    path('my-listings/', include('user_posts.urls')),
     path('admin/', admin.site.urls, name = 'admin')
 ]
 
