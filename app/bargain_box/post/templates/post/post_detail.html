@@ -13,7 +13,7 @@
         <span style="font-size:0.5em"><a href="{% url 'post-edit' post.pk %}">Edit</a></span>
         {% endcomment %}
 
-        <span style="font-size:0.5em"><a href="#">Edit</a></span>
+        <span style="font-size:0.5em"><a href="{% url 'post-edit' pk=post.pk %}">Edit</a></span>
     </h1>
 </div>
 
