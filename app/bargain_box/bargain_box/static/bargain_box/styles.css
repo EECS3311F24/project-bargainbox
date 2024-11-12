@@ -1,0 +1,110 @@
+
+nav {
+    background-color: #32612d;
+}
+
+nav img {
+    width: 205px;
+    height: 45px;
+}
+
+.nav-links ul {
+    list-style-type: circle;
+    margin: 0px;
+}
+
+.nav-links li {
+    display: inline;
+    padding-left: 20px;
+    color: #ffffff;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25em;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    color: rgb(183, 255, 128);
+    font-size: 1.25em;
+}
+
+main {
+    margin: 12px;
+}
+
+main h1 {
+    text-align: center;
+}
+
+img.profile-image {
+    height: 125px;
+    width: 125px;
+    box-shadow: 0px 4px 10px 1px #00000033;
+    border-radius: 50%;
+}
+
+p input {
+    display: block;
+}
+
+ul.errorlist {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.errorlist li {
+    color: red;
+}
+
+.bb-btn {
+    color: #ffffff;
+    font-size: 1.25em;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+.bb-btn-link {
+    color: #ffffff;
+    font-size: 1.25em;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 7px 15px;
+    text-decoration: none;
+}
+
+.bb-btn-green {
+    background: #32612d;
+    border-color: #44943b;
+}
+
+.bb-btn-green:hover {
+    border-color: #32612d;
+    box-shadow: 0px 2px 10px 1px #32612d8f;
+}
+
+.bb-btn-red {
+    background: #990000;
+    border-color: #e42424;
+}
+
+.bb-btn-red:hover {
+    border-color: #990000;
+    box-shadow: 0px 2px 10px 1px #9900008f;
+}
+
+.bb-btn-grey {
+    background: #7a7a7a;
+    border-color: #bcbcbc;
+}
+
+.bb-btn-grey:hover {
+    border-color: #7a7a7a;
+    box-shadow: 0px 2px 10px 1px #5c5c5c8f;
+}

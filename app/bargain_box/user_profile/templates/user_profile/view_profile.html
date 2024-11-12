@@ -1,0 +1,18 @@
+{% extends "home/foundation.html" %}
+
+{% block content %}
+    <div class="d-flex justify-content-between">
+        <h1>My profile</h1>
+    </div>
+
+    <div class="container">
+        <div style="display: flex">
+            <!--Keep these 2 tags on same line-->
+            <h3>Hello, <span style="color:red">{{ user.username }}</span></h3>
+        </div>
+        <p>Email: {{ user.email }}</p>
+        <img class="profile-image" src="{{ user.profile.image.url }}" alt="user profile image">
+        <a class="bb-btn-link bb-btn-green" href="{% url 'edit-profile' %}">Edit profile</a>
+        <a class="bb-btn-link bb-btn-red" href="{% url 'delete-profile' %}">Delete profile</a>
+    </div>
+{% endblock content %}

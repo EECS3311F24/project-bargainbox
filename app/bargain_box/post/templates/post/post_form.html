@@ -1,0 +1,45 @@
+{% extends "home/foundation.html" %}
+
+{% block content %}
+    <div class = "content section">
+        <form method = "POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class = "form-group">
+                <legend class = "border-bottom mb-4">Add Post</legend>
+                <!--For The Title-->
+                <div class="form-group">
+                    <label for="{{form.title.id_for_label}}">Post Title</label>
+                    <input type="text" name ="title" class="form-control" id="{{form.title.id_for_label}}" value="{{form.title.value|default_if_none:''}}">
+                </div>
+                <!--For The Content-->
+                <div class="form-group">
+                    <label for="{{form.content.id_for_label}}">Content/Description</label>
+                    <textarea name ="content" class="form-control" id="{{form.content.id_for_label}}">{{form.content.value|default_if_none:''}}</textarea>
+                </div>
+                <!--For the Location-->
+                <div class="form-group">
+                    <label for="{{form.location.id_for_label}}">Location</label>
+                    <input type="text" name ="location" class="form-control" id="{{form.location.id_for_label}}" value="{{form.location.value|default_if_none:''}}">
+                </div>
+                <!--For the Quantity-->
+                <div class="form-group">
+                    <label for="{{form.quantity.id_for_label}}">Quantity</label>
+                    <input type="number" name ="quantity" class="form-control" id="{{form.quantity.id_for_label}}" value="{{form.quantity.value|default_if_none:''}}">
+                </div>
+                <!--For the Price-->
+                <div class="form-group">
+                    <label for="{{form.price.id_for_label}}">Price</label>
+                    <input type="number" step="0.01" name ="price" class="form-control" id="{{form.price.id_for_label}}" value="{{form.price.value|default_if_none:''}}">
+                </div>
+                <!--For the Image-->
+                <div class="form-group">
+                    <label for="{{form.image.id_for_label}}">Post Image</label>
+                    <input type="file" name="image" class="form-control" id="{{form.image.id_for_label}}">
+                </div>
+            </fieldset>
+            <div class = "form-group">
+                <button class="btn btn-outline-info" type = "submit">Post</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

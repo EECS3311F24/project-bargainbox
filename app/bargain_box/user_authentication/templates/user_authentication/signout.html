@@ -1,0 +1,10 @@
+{% extends "home/foundation.html" %}
+
+{% block content %}
+<h2>You Have Successfully Logged Out!</h2>
+    <div class = "border-top pt-3">
+        <small class = "text-muted">
+            <a class = "ml-2" href="{%url 'signin' %}">Login Again!</a>
+        </small>
+    </div>
+{% endblock content %}
