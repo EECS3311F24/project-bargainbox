@@ -55,7 +55,7 @@ The following were the goals of the meeting held on November 5th, 2024:
    - Create Listing, Add Picture to Listing, View All Posts on Homepage, and Search Functionality To View Specific Posts (By Title and/or Location)
 
 2. Annie Jhamb
-   - Edit Listing
+   - Edit Listing, Delete Listing, SR2.md 
 
 3. Jasmin Slootweg
    - View Listings
