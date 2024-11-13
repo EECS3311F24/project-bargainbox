@@ -1,29 +1,29 @@
 {% extends "home/foundation.html" %}
 {% block content %}
     <div class="content-section">
-        <script>
-            function deleteAccount(CSRFToken) {
-                const deleteRequest = new XMLHttpRequest();
-                //initialize a new HTTP DELETE request to the /my-profile/delete/ endpoint
-                deleteRequest.open("DELETE", "/my-profile/delete/", true);
-                //include the "x-csrftoken" HTTP header and associated CSRF token in the request
-                deleteRequest.setRequestHeader("x-csrftoken", CSRFToken);
-                //when the state of the deleteRequest XMLHttpRequest changes, executed the following function
-                deleteRequest.onreadystatechange = function() {
-                    //readyState = 4 means the request is "done"
-                    //HTTP response status = 200 means the request was executed successfully
-                    if(this.readyState == 4 && this.status == 200) {
-                        window.location = "/";
-                    }
-                }
-                //send the DELETE request
-                deleteRequest.send();
-            }
-        </script>
-
         <h1>Are you sure you want to delete your account?</h1>
 
-        <button class="btn btn-outline-info" onclick="deleteAccount('{{csrf_token}}')">Yes, I'm sure</button>
-        <a href="/my-profile">No, take me back</button>
+        <button class="bb-btn bb-btn-red" onclick="deleteAccount('{{csrf_token}}')">Delete</button>
+        <a class="bb-btn-link bb-btn-grey" href="/my-profile">Cancel</a>
     </div>
+
+    <script>
+        function deleteAccount(CSRFToken) {
+            const deleteRequest = new XMLHttpRequest();
+            //initialize a new HTTP DELETE request to the /my-profile/delete/ endpoint
+            deleteRequest.open("DELETE", "/my-profile/delete/", true);
+            //include the "x-csrftoken" HTTP header and associated CSRF token in the request
+            deleteRequest.setRequestHeader("x-csrftoken", CSRFToken);
+            //when the state of the deleteRequest XMLHttpRequest changes, executed the following function
+            deleteRequest.onreadystatechange = function() {
+                //readyState = 4 means the request is "done"
+                //HTTP response status = 200 means the request was executed successfully
+                if(this.readyState == 4 && this.status == 200) {
+                    window.location = "/";
+                }
+            }
+            //send the DELETE request
+            deleteRequest.send();
+        }
+    </script>
 {% endblock content %}
