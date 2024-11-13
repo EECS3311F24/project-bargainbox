@@ -58,7 +58,8 @@ The following were the goals of the meeting held on November 5th, 2024:
    - Edit Listing
 
 3. Jasmin Slootweg
-   - Delete Listing 
+   - View Listings
+   - HTML Styling
 
 4. Michael Favret
    - Delete profile, Add profile picture, and Update profile picture
