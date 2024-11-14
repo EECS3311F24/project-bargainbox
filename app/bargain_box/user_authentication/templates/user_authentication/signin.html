@@ -1,23 +1,17 @@
-{% extends "home/foundation.html" %}
+{% extends "user_profile/user_profile_foundation.html" %}
 
-{% block content %}
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="profile col-sm-12 col-md-10 col-lg-8 col-xl-6">
-                <form method="POST">
-                    {% csrf_token %}
-                    <fieldset class="form-group">
-                        <legend><h1>Sign in</h1></legend>
-                        {{ form.as_p }}
-                    </fieldset>
-                    <div class="bb-btn-set">
-                        <button class="bb-btn bb-btn-green" type="submit">Sign in</button>
-                    </div>
-                </form>
-                <div class="bb-btn-set">
-                    <small class="text-muted">Don't have a BargainBox account? <a class = "ml-2" href="{% url 'register' %}">Register</a> instead.</small>
-                </div>
-            </div>
-        </div>
+{% block user_profile_content %}
+<form method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        <legend><h1>Sign in</h1></legend>
+        {{ form.as_p }}
+    </fieldset>
+    <div class="bb-btn-set">
+        <button class="bb-btn bb-btn-green" type="submit">Sign in</button>
     </div>
-{% endblock content %}
+</form>
+<div class="bb-btn-set">
+    <small class="text-muted">Don't have a BargainBox account? <a class = "ml-2" href="{% url 'register' %}">Register</a> instead.</small>
+</div>
+{% endblock user_profile_content %}

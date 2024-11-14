@@ -106,21 +106,10 @@ span.helptext {
 }
 
 div.profile {
-    /*border: 2px solid black;*/
     border-radius: 20px;
     padding: 40px 20px;
     box-shadow: 0px 5px 10px 5px #00000033;
 }
-/*
-.profile label {
-    display: block;
-    color: black;
-    font-style: normal;
-    font-size: 1.25em;
-    margin: 20px;
-}
-*/
-
 
 .profile img {
     height: 150px;
@@ -129,7 +118,6 @@ div.profile {
     border-radius: 50%;
     display: block;
     margin: 20px auto;
-    
 }
 
 .profile p {
