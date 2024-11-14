@@ -1,40 +1,41 @@
-{% extends "home/foundation.html" %}
-{% block content %}
-    <div class="content-section">
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Edit profile</legend>
-                <img class="profile-image" id="id_image_preview" src="{{ user.profile.image.url }}" alt="user profile image">
-                {{ image_form.as_p }}
-                {{ username_and_email_form.as_p }}
-            </fieldset>
-            <div class="form-group">
-                <button class="bb-btn bb-btn-green" type="submit">Save</button>
-                <a class="bb-btn-link bb-btn-grey" href="/my-profile/">Cancel</a>
-            </div>
-        </form>
+{% extends "user_profile/user_profile_foundation.html" %}
+
+{% block user_profile_content %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        <legend><h1>Edit profile</h1></legend>
+        <img class="profile-image" id="id_image_preview" src="{{ user.profile.image.url }}" alt="user profile image">
+        {{ image_form.as_p }}
+        {{ username_and_email_form.as_p }}
+    </fieldset>
+    <div class="bb-btn-set">
+        <button class="bb-btn bb-btn-green" type="submit">Save</button>
+        <a class="bb-btn-link bb-btn-grey" href="/my-profile/">Cancel</a>
     </div>
+</form>
+{% endblock user_profile_content %}
 
-    <script>
-        const inputElement = document.getElementById("id_image");
-        const imageElement = document.getElementById("id_image_preview");
-        let imageBlobURL = undefined;
-        //when the user selects a new image, the HTML input element fires a "chnage" event
-        //call the update() function when this happens
-        inputElement.addEventListener("change", update); 
+{% block script %}
+<script>
+    const inputElement = document.getElementById("id_image");
+    const imageElement = document.getElementById("id_image_preview");
+    let imageBlobURL = undefined;
+    //when the user selects a new image, the HTML input element fires a "chnage" event
+    //call the update() function when this happens
+    inputElement.addEventListener("change", update); 
         
-        function update() {
-            //revoke the old preview image's blob URL (if any) since it is no longer needed
-            URL.revokeObjectURL(imageBlobURL);
+    function update() {
+        //revoke the old preview image's blob URL (if any) since it is no longer needed
+        URL.revokeObjectURL(imageBlobURL);
 
-            //if the user has selected at least one image file
-            if(inputElement.files != undefined && inputElement.files[0] != undefined) {
-                //generate a new blob URL for the first image in the list
-                imageBlobURL = URL.createObjectURL(inputElement.files[0]);
-                //then, using this new blob URL, display the image to the user
-                imageElement.setAttribute("src", imageBlobURL);
-            }
+        //if the user has selected at least one image file
+        if(inputElement.files != undefined && inputElement.files[0] != undefined) {
+            //generate a new blob URL for the first image in the list
+            imageBlobURL = URL.createObjectURL(inputElement.files[0]);
+            //then, using this new blob URL, display the image to the user
+            imageElement.setAttribute("src", imageBlobURL);
         }
-    </script>
-{% endblock content %}
+    }
+</script>
+{% endblock script %}
