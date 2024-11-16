@@ -4,7 +4,7 @@
 <h1>Delete profile</h1>
 <p>{{ user.username }}, are you sure you want to delete your BargainBox profile? This action is <strong>permanent</strong> and <strong>cannot be undone</strong>. If you wish to keep your profile, click the Cancel button. If you wish to proceed with the permanent deletion of your profile, click the Delete button. Upon clicking the Delete button, you will be signed out of your account and directed to the home screen. All of your profile information and posts will be permanently deleted from our system.</p>
 <div class="bb-btn-set">
-    <a class="bb-btn-link bb-btn-green" href="/my-profile">Cancel</a>
+    <a class="bb-btn-link bb-btn-green" href="{% url 'view-profile' %}">Cancel</a>
     <button class="bb-btn bb-btn-red" onclick="deleteAccount('{{csrf_token}}')">Delete</button>
 </div>
 {% endblock user_profile_content %}
