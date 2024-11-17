@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container">
     <h1 class="text-center display-4">
-        Detailed Listing of <span style="color:red">{{ post.title }}</span>
+        Detailed Listing of <span style="color:rgb(137, 91, 13); font-weight: bold;">{{ post.title }}</span>
 
         {% comment %}
         Again since there is mismatch in the model so I didn't configure for you right away Annie
@@ -43,6 +43,12 @@
     <h3>Quantity: {{ post.quantity }}</h3>
     <h3>Price: {{ post.price }}</h3>
 </div>
+
+{% if post.author == user %}
+    <div class="text-center">
+        <a href="{% url 'post-delete' post.pk %}" class="btn btn-danger">Delete Post</a>
+    </div>
+{% endif %}
 
 {% endblock content %}
 

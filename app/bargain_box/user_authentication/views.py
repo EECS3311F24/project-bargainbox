@@ -8,14 +8,14 @@ from django.contrib.auth import logout
 # Create your views here.
 def user_account_registration(request):
     context = {
-        'page_title': 'Create an account'
+        'page_title': 'Register'
     }
     return render(request, 'user_authentication/register.html', context)
 
 
 def user_account_signin(request):
     context = {
-        'page_title': 'Signin'
+        'page_title': 'Sign in'
     }
     return render(request, 'user_authentication/signin.html', context)
 

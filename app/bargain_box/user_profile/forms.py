@@ -11,7 +11,7 @@ class UpdateUserTableForm(forms.ModelForm):
         fields = ['username', 'email']
 
 class UpdateProfileTableForm(forms.ModelForm):
-    image = forms.ImageField()
+    image = forms.ImageField(required=False)
 
     class Meta:
         model = Profile

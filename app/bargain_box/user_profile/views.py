@@ -48,7 +48,7 @@ def edit_profile(request):
             return redirect('view-profile')
         else:
             context['username_and_email_form'] = update_user_form
-            context['image_form'] = update_profile_form
+            context['image_form'] = UpdateProfileTableForm()
 
             return render(request, 'user_profile/edit_profile.html', context)
 
