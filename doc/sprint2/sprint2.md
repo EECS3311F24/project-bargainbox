@@ -52,17 +52,25 @@ The following were the goals of the meeting held on November 5th, 2024:
 *Each member of the team was assigned with specific tasks. Apart from their personal assignments, everyone stepped in to help each other in overcoming any issues. Here's a list of the tasks that each member completed-*
 
 1. Arjun Grewal
-   - Create Listing, Add Picture to Listing, View All Posts on Homepage, and Search Functionality To View Specific Posts (By Title and/or Location)
+   - Create Listing
+   - Add Picture to Listing
+   - View All Posts on Homepage
+   - Search Functionality To View Specific Posts (By Title and/or Location)
 
 2. Annie Jhamb
-   - Edit Listing, Delete Listing, SR2.md 
+   - Edit Listing
+   - Delete Listing,
+   - SR2.md
+   - System Arcitecture Diagram 
 
 3. Jasmin Slootweg
    - View Listings
    - HTML Styling
 
 4. Michael Favret
-   - Delete profile, Add profile picture, and Update profile picture
+   - Delete profile
+   - Add profile picture
+   - Update profile picture
 
 5. Quoc Trong Dao
    - View a Listing in Detail
