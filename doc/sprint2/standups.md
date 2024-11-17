@@ -172,7 +172,7 @@ I currently do not have any blockers as all programming features have been compl
 
 **Annie:**  
 **1\.** What did you work on since the last standup?  
-Since the last standup meeting, I have implemented the delete post feature.
+Since the last standup meeting, I have implemented the delete post feature. I have also started researching about the System Architecture Diagram in order to make it better and follow the MVC structure during this sprint. 
 
 **2\.** What do you commit to next?  
 Next, I commit to completing the System Architecture diagram pdf document.
@@ -181,7 +181,7 @@ Next, I commit to completing the System Architecture diagram pdf document.
 I intend to finish the System Architecture diagram pdf document by Sunday, November 17, 2024.
 
 **4\.** Do you have any blockers?  
-At this time, I have no blockers.
+At this time, I have no blockers and all tasks have been implemeted. 
 
 **Jasmin:**  
 **1\.** What did you work on since the last standup?  
