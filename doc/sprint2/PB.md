@@ -56,6 +56,10 @@ As noted, this story was initially planned to be fully completed during sprint 1
 * Allow for a signed in user to update their profile picture.
 * Allow for a signed in user to permanently delete their profile and all associated data.
 
+**As a registered or non-registered user, I would like to see all posts on the Homepage.**
+This user story is acceptable when:
+1. Any user is able to access the homepage and view all posts created by all other registered users on the platform.
+
 **As a registered user, I would like to create/post a new listing (limited to the Greater Toronto Area).**  
 This user story is acceptable when:  
 1.	A signed in user is able to locate and click the post button.  
@@ -84,7 +88,7 @@ This user story is acceptable when:
 7.	When the save button is clicked, the listing is updated.  
 8.	When the cancel button is clicked, all changes are discarded.  
 
-**As a registered user or a non-registered user, I would like to browse listings by category and/or region.**  
+**As a registered user or a non-registered user, I would like to browse listings by title and/or location.**  
 This user story is acceptable when:  
 1.	A registered user or a non-registered user is able to navigate to the BargainBox home page.  
 2.	The user can view listings according to the category and/or region they select.  
@@ -104,6 +108,18 @@ This user story is acceptable when:
 1.	A registered user is able to locate and click the bookmark button on a listing.  
 2.	The listing is saved to the user’s bookmarked listings.  
 3.	The user is able to access a page where all of their bookmarked listings are displayed.  
+
+**As a registered user, I would like to be able to reset my password.**
+This user story is acceptable when:
+1. A registered user is able to login to their account and click on the my profile button.
+2. The user is then able to modify their password to something else.
+3. The user will no longer we able to log into their account using the previous password (must use the newly created password).
+
+**As a resgistered user, I would like to be able to view 10 posts per page to reduce scrolling.**
+This user story is acceptable when:
+1. Any user is able to view all posts, however they must click a "next page" button to view the next subset of maximum 10 posts.
+2. When the "next" page button is clicked, the user can also click a "previous page" button to view the previous 10 posts.
+3. The user is still able to see all posts by either clicking the "next page" or "previous page" buttons
 
 ***
 
