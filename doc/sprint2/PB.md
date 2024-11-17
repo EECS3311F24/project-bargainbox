@@ -56,17 +56,17 @@ As noted, this story was initially planned to be fully completed during sprint 1
 * Allow for a signed in user to update their profile picture.
 * Allow for a signed in user to permanently delete their profile and all associated data.
 
-**As a registered or non-registered user, I would like to see all posts on the Homepage.**
-This user story is acceptable when:
-1. Any user is able to access the homepage and view all posts created by all other registered users on the platform.
-
-**As a registered user, I would like to create/post a new listing (limited to the Greater Toronto Area).**  
+**As a registered user, I would like to create/post a new listing.**  
 This user story is acceptable when:  
 1.	A signed in user is able to locate and click the post button.  
 2.	After clicking the post button, the create listing page is displayed. The page has multiple form fields, as well as a post button and a cancel button.  
-3.	The user must provide details for the listing, including the title, price, pictures, and location (limited to the Greater Toronto Area).  
+3.	The user must provide details for the listing, including the title, price, pictures, and location.  
 4.	If the cancel button is clicked, then everything is discarded.  
 5.	If the post button is clicked, then the listing is saved and made visible to the public.  
+
+**As a registered or non-registered user, I would like to see all posts on the Homepage.**  
+This user story is acceptable when:  
+1. Any user is able to access the homepage and view all posts created by all other registered users on the platform.  
 
 **As a registered user, I would like to view my listings.**  
 This user story is acceptable when:  
@@ -88,10 +88,10 @@ This user story is acceptable when:
 7.	When the save button is clicked, the listing is updated.  
 8.	When the cancel button is clicked, all changes are discarded.  
 
-**As a registered user or a non-registered user, I would like to browse listings by title and/or location.**  
+**As a registered user or a non-registered user, I would like to search for listings by title and/or location.**  
 This user story is acceptable when:  
 1.	A registered user or a non-registered user is able to navigate to the BargainBox home page.  
-2.	The user can view listings according to the category and/or region they select.  
+2.	The user can search for listings by entering a title and/or location string.  
 
 ***
 
