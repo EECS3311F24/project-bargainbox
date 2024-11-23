@@ -121,7 +121,7 @@ This user story is acceptable when:
 2.	The listing is saved to the user’s bookmarked listings.  
 3.	The user is able to access a page where all of their bookmarked listings are displayed.
 
-**As a registered user, I would like to be able to bookmark listings that I am interested in.**
+**As a registered user, I would like to be able to bookmark listings that I am interested in.**  
 This user story is acceptable when:
 1. A registered user is able to see an "Add Bookmark" button in the detailed view of a post created by another user.
 2. Once the "Add Bookmark" button is clicked by the user, it is no longer visible on the detailed view of the post.
@@ -129,7 +129,7 @@ This user story is acceptable when:
 4. Unregistered users do not have the ability to bookmark any posts (and hence the "Add Bookmark" button is not visible to them in the detailed post view).
 5. A registered user's bookmarked posts are saved within the database, and hence if the user were to logout, then the bookmarked posts are still tracked.
 
-**As a registered user, I would like to be able to view an organized collection of all of my bookmarked listings on a separate tab.**
+**As a registered user, I would like to be able to view an organized collection of all of my bookmarked listings on a separate tab.**  
 This user story is acceptable when:
 1. A registered user's bookmarked posts can be viewed on a separate tab titled "Bookmarked Posts" which is accessible to signed in users only.
 2. Posts in the "Bookmarked Posts" tab are visible in a grid view comprising of two columns so that it is nicely organized to ensure that the user can easily see all of their bookmarked posts.
@@ -137,7 +137,7 @@ This user story is acceptable when:
 4. An unregistered user does not have the "Bookmarked Posts" tab visible to them (as this is a feature associated with registered users only).
 5. A registered user is able to click on the title of a Post within the "Bookmarked Posts" tab and be redirected to the "Post Detailed View" page associated with that post. 
 
-**As a registered user, I would like to remove a bookmark from a listing that I have bookmarked.**
+**As a registered user, I would like to remove a bookmark from a listing that I have bookmarked.**  
 This user story is acceptable when:
 1. A registered user is able to click on a "Remove Bookmark" button in the "Post Detailed View" page of a post that they have bookmarked, in order to remove a bookmark
 2. The "Remove Bookmark" button is no longer visible in the "Post Detailed View" page if the bookmark has been removed
