@@ -26,6 +26,8 @@ from django.conf import settings   # added for pictures
 from django.conf.urls.static import static # added for pictures
 from post.views import PostListView # Displaying all posts in home
 
+
+
 urlpatterns = [
     path('', PostListView.as_view(), name = 'home'), # Displaying all posts in home
 
@@ -35,7 +37,7 @@ urlpatterns = [
 
     path('post/', include("post.urls")),
     
-    path('my-profile/', include('user_profile.urls')),
+    path('profile/', include('user_profile.urls')),
     path('my-posts/', include('user_posts.urls')),
     
     path('admin/', admin.site.urls, name = 'admin')

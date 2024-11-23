@@ -50,5 +50,35 @@
     </div>
 {% endif %}
 
+<!--This is for the Add and Remove Bookmark Buttons-->
+{% if user in post.bookmarks.all %}
+    {% comment %}
+    Hey, Timothy, this is where you can add the remove bookmark button
+    {% endcomment %}
+{% else %}
+    <!--Creates the Add Bookmark button-->
+    {% if user.is_authenticated %}
+        {% if user != post.author %}
+            <form action = " {% url 'adding_bookmark' post.id %}" method = "post"> 
+                {% csrf_token %} 
+                <div style = "display: flex; justify-content: center; align-items: center;">
+                    <button class = "btn custom" type = "submit">Add Bookmark</button>
+                </div>
+            </form>
+            <style>
+                .custom
+                {
+                    background-color: rgb(41, 142, 108);
+                    cursor: pointer;
+                    border-radius: 10px;
+                    font-size: 20px;
+                    color: white;
+                    justify-content: center;
+                }
+            </style>
+        {% endif %}
+    {% endif %}
+{% endif %}
+
 {% endblock content %}
 
