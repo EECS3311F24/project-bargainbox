@@ -142,3 +142,40 @@ div.bb-btn-set {
     display: flex;
     justify-content: center;
 }
+
+/* Bottom Navigation Bar */
+.navbar-bottom {
+    background-color: #32612d; /* New color */
+    color: #ffffff;
+    padding: 20px 0;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+.navbar-bottom .nav-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.navbar-bottom .nav-links div {
+    flex: 1;
+}
+.navbar-bottom .nav-links a {
+    color: #00171F;
+    text-decoration: none;
+    display: block;
+}
+
+/* Categories Page Content */
+.categories-content {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+.categories-content h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
