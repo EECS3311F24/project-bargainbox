@@ -1,0 +1,39 @@
+{% extends "home/foundation.html" %}
+
+{% block content %}
+    {% if bookmarked_posts %}
+        <h1>These are Your Bookmarked Posts!</h1>
+        <div class = "body">
+            {% for post in bookmarked_posts %}
+                <article class = "content" style = "border: 2px solid #fcfcfcfa; padding: 20px; background-color: #ede0c8fa; font-style: Bold;">
+                    Date Posted: {{post.date_posted|date:"F d, Y"}}
+                    <h2 class = "title"><a href="{% url 'post-detail' post.id %}">{{post.title}}</a></h2>
+                    <p class = "description">{{post.content}}</p>
+                    <p class = "location"><strong>Location: </strong>{{post.location}}</p>
+                    <p class = "quantity"><strong>Quantity: </strong>{{post.quantity}}</p>
+                    <p class = "price"><strong>Price: </strong>${{post.price}}</p>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h1>You Have no Bookmarked Posts!</h1>
+    {% endif %}
+    <style>
+        .body
+        {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-color: rgb(224, 246, 215);
+            grid-auto-rows: auto;
+            text-align: center;
+        }
+        .body.content
+        {
+            background-color: azure;
+            text-align: center;
+        }
+    </style>
+
+{% endblock content %}

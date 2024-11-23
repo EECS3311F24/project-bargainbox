@@ -7,7 +7,7 @@
             Find a Bargain for Something you Love
         </h1>
         <form method="get" action="{% url 'home' %}" style="display: flex; justify-content: center;">
-            <input name = "q" type = "text" placeholder = "Type Here to Search for Posts" value = "{{request.GET.q}}"
+            <input name = "query" type = "text" placeholder = "Type Here to Search for Posts" value = "{{request.GET.query}}"
                 style = "padding: 15px; width: 250px; font-size: 1rem;"/>
             <button type = "submit" style = "padding: 10px; background-color: rgb(43, 114, 74); color: rgb(247, 247, 244); cursor: pointer;"> Search </button>
         </form>
@@ -28,25 +28,46 @@
     {% if posts %}
     <div class="post-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px;">
         {% for post in posts %}
-            <article class="content" style="border: 2px solid #ccc; padding: 20px; background-color: #bfbbb2;">
+            <article class = "content">
+                <style>
+                 article.content
+                 {
+                    border: 2px solid #f0d29cfa;
+                    padding: 20px;
+                    background-color: #f0d29cfa;
+                 }
+                </style>
                 <div class="body">
-                    <div class="">
+                    <div class="header_for_posts">
                         <a class="mr-2" href="#">{{post.author.username}}</a>
                         <small class="date">{{post.date_posted|date:"F d, Y"}}</small>
                     </div>
-                    <h2 class="title" 
-                    style="font-size: 2rem; font-weight: bold; color: #222; text-transform: uppercase; letter-spacing: 1px; position: relative">
-                        <a href="{% url 'post-detail' post.id %}" style="color: #222; text-decoration: none;">
-                            <span style="position: relative;">
-                                <span style="margin-right: 10px;">🌿</span>
-                                {{post.title}}
+                    <h2 class = "title">
+                    <style>
+                        .title
+                        {
+                            font-size: 2rem;
+                            font-style: normal;
+                            font-weight: bold;
+                            color: #222;
+                            text-decoration: wavy;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            position: relative;
+                        }
+                    </style>
+                        <a href="{% url 'post-detail' post.id %}" style = "color: #222; text-decoration: none; letter-spacing: 1px;">
+                            <span style = "position: relative;">
+                                <span style="margin-right: 10px;">🌿</span> {{post.title}}
                             </span>
                         </a>
                     </h2>
-                    <p class="description">{{post.content}}</p>
-                    <p class="location"><strong>Location: </strong>{{post.location}}</p>
-                    <p class="quantity"><strong>Quantity: </strong>{{post.quantity}}</p>
-                    <p class="price"><strong>Price: </strong>${{post.price}}</p>
+                    <h3\>
+                        <p class="description">{{post.content}}</p>
+                        <p class="location"><strong>Location: </strong>{{post.location}}</p>
+                        <p class="quantity"><strong>Quantity: </strong>{{post.quantity}}</p>
+                        <p class="price"><strong>Price: </strong>${{post.price}}</p>
+                    </h3>
                     {% if post.image %}
                         <img src = "{{post.image.url}}" style = "max-width: 50px">
                     {% endif %}
@@ -55,14 +76,16 @@
         {% endfor %}
     </div>
     {% else %}
-        <div class="none">
+        <div class="no_posts_found">
             <strong>No posts were found. Please search for something else!</strong>
         </div>
         <style>
-            .none
+            .no_posts_found
             {
                 text-align: center;
                 background-color: #dee7e1;
+                position: relative;
+                font-style: oblique;
             }
         </style>
     {% endif %}
