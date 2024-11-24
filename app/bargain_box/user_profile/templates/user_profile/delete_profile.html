@@ -1,29 +1,32 @@
-{% extends "home/foundation.html" %}
-{% block content %}
-    <div class="content-section">
-        <h1>Are you sure you want to delete your account?</h1>
+{% extends "user_profile/user_profile_foundation.html" %}
 
-        <button class="bb-btn bb-btn-red" onclick="deleteAccount('{{csrf_token}}')">Delete</button>
-        <a class="bb-btn-link bb-btn-grey" href="/my-profile">Cancel</a>
-    </div>
+{% block user_profile_content %}
+<h1>Delete profile</h1>
+<p>{{ user.username }}, are you sure you want to delete your BargainBox profile? This action is <strong>permanent</strong> and <strong>cannot be undone</strong>. If you wish to keep your profile, click the Cancel button. If you wish to proceed with the permanent deletion of your profile, click the Delete button. Upon clicking the Delete button, you will be signed out of your account and directed to the home screen. All of your profile information and posts will be permanently deleted from our system.</p>
+<div class="bb-btn-set">
+    <a class="bb-btn-link bb-btn-green" href="{% url 'view-profile' %}">Cancel</a>
+    <button class="bb-btn bb-btn-red" onclick="deleteAccount('{{csrf_token}}')">Delete</button>
+</div>
+{% endblock user_profile_content %}
 
-    <script>
-        function deleteAccount(CSRFToken) {
-            const deleteRequest = new XMLHttpRequest();
-            //initialize a new HTTP DELETE request to the /my-profile/delete/ endpoint
-            deleteRequest.open("DELETE", "/my-profile/delete/", true);
-            //include the "x-csrftoken" HTTP header and associated CSRF token in the request
-            deleteRequest.setRequestHeader("x-csrftoken", CSRFToken);
-            //when the state of the deleteRequest XMLHttpRequest changes, executed the following function
-            deleteRequest.onreadystatechange = function() {
-                //readyState = 4 means the request is "done"
-                //HTTP response status = 200 means the request was executed successfully
-                if(this.readyState == 4 && this.status == 200) {
-                    window.location = "/";
-                }
+{% block script %}
+<script>
+    function deleteAccount(CSRFToken) {
+        const deleteRequest = new XMLHttpRequest();
+        //initialize a new HTTP DELETE request to the /my-profile/delete/ endpoint
+        deleteRequest.open("DELETE", "/my-profile/delete/", true);
+        //include the "x-csrftoken" HTTP header and associated CSRF token in the request
+        deleteRequest.setRequestHeader("x-csrftoken", CSRFToken);
+        //when the state of the deleteRequest XMLHttpRequest changes, executed the following function
+        deleteRequest.onreadystatechange = function() {
+            //readyState = 4 means the request is "done"
+            //HTTP response status = 200 means the request was executed successfully
+            if(this.readyState == 4 && this.status == 200) {
+                window.location = "/";
             }
-            //send the DELETE request
-            deleteRequest.send();
         }
-    </script>
-{% endblock content %}
+        //send the DELETE request
+        deleteRequest.send();
+    }
+</script>
+{% endblock script %}

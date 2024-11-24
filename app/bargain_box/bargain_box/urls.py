@@ -26,18 +26,20 @@ from django.conf import settings   # added for pictures
 from django.conf.urls.static import static # added for pictures
 from post.views import PostListView # Displaying all posts in home
 
+
+
 urlpatterns = [
     path('', PostListView.as_view(), name = 'home'), # Displaying all posts in home
 
-    path('post/', include("post.urls")),
-    
     path('register/', user_registration_views.register, name='register'),
     path('signin/', auth_views.LoginView.as_view(template_name = 'user_authentication/signin.html'), name = 'signin'),
     path("signout/", user_authentication_views.user_account_signout, name = 'signout'),
-   
-    path('my-profile/', include('user_profile.urls')),
+
+    path('post/', include("post.urls")),
+    
+    path('profile/', include('user_profile.urls')),
     path('my-posts/', include('user_posts.urls')),
-    path('my-listings/', include('user_posts.urls')),
+    
     path('admin/', admin.site.urls, name = 'admin')
 ]
 

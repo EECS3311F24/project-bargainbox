@@ -7,6 +7,35 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import Q
 
+#imports added for bookmarks
+from django.shortcuts import get_object_or_404
+from django.shortcuts import redirect
+from django.views import View
+
+# classes created for the add bookmark view
+class AddingBookmarkView(LoginRequiredMixin, View):
+    def post(self, request, post_id):
+        bookmark = get_object_or_404(Post, id = post_id)
+        bookmark.bookmarks.add(request.user)
+        return redirect('post-detail', pk = post_id)
+
+# class based view created for listing all bookmarked posts by a user
+class BookmarkView(LoginRequiredMixin, ListView):
+    model = Post
+    template_name = 'post/bookmarked_posts.html'
+    context_object_name = 'bookmarked_posts'
+
+    # this function is used to get all of the posts that the user has bookmarked
+    def get_queryset(self):
+        queryset = Post.objects.filter(bookmarks = self.request.user)
+        return queryset
+
+
+# created for remove bookmark view for Timothy when you are working on this part
+class RemovingBookmarkView(LoginRequiredMixin, View):
+    def post(self):
+        return
+
 # this is our class based view for listing all posts
 class PostListView(ListView):
     model = Post
@@ -16,7 +45,7 @@ class PostListView(ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        search_query = self.request.GET.get('q', None)
+        search_query = self.request.GET.get('query', None)
         if search_query:
             queryset = queryset.filter(
                 Q(title__icontains=search_query) |
@@ -61,6 +90,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
+    template = "post/post_confirm_delete.html"
     success_url = '/'  
 
     def test_func(self):

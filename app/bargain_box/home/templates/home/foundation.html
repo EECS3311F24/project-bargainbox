@@ -29,6 +29,8 @@
                             <li><a href="#">Categories</a></li>
                             <li><a href="{% url 'post-create' %}">Post</a></li>
                             {% if user.is_authenticated %}
+                            <li><a href="{% url 'bookmarked_posts' %}">Bookmarked Posts</a></li> <!--Added for bookmarks-->
+
                             <li><a href="{% url 'view-posts' %}">My listings</a></li>
                             <li><a href="{% url 'view-profile' %}">My profile</a></li>
                             <li><a href="{% url 'signout' %}">Sign out</a></li>
@@ -55,6 +57,8 @@
                 {% endblock %}
             </div>
         </main>
+        {% block script %}
+        {% endblock %}
         <!--
         <footer>
 

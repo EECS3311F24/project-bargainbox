@@ -2,70 +2,103 @@
 {% load static %}
 
 {% block content %}
-    <div class="search-section" style= "margin-bottom: 30px; background-size:cover; padding: 50px 0; text-align: center; background-color: #0a4a19;">
+    <div class = "search_functionality">
+        <style>
+            .search_functionality
+            {
+                margin-bottom: 25px;
+                background-size: cover;
+                padding: 50px;
+                background-color: #0a4a19;
+            }
+        </style>
         <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 30px; color: #FFFFFF;">
             Find a Bargain for Something you Love
         </h1>
-        <form method="get" action="{% url 'home' %}" style="display: flex; justify-content: center;">
-            <input type="text" name="q" placeholder="Type Here to Search for Posts!" value="{{request.GET.q}}"
-                style="padding: 10px; width: 300px; font-size: 1rem; border: 1px solid #030303fa; border-radius: 0px;"/>
-            <button type="submit" style="padding: 10px; background-color: rgb(43, 114, 74); color: rgb(247, 247, 244); border: none; border-radius: 0px; cursor: pointer;">
-                Search
-            </button>
+        <form method= "get" action = "{% url 'home' %}" style = "display: flex; justify-content: center;">
+            <input name = "query" type = "text" placeholder = "Type Here to Search for Posts" value = "{{request.GET.query}}" style = "padding: 15px; width: 250px; font-size: 1rem;"/>
+            <button type = "submit" style = "padding: 10px; background-color: rgb(222, 20, 20); color: rgb(247, 247, 244); cursor: pointer;"> Search </button>
         </form>
     </div>
-    {% if request.GET.q %}
-        <div class="search-results-message" style="text-align: center; margin-bottom: 20px;">
-            <p><strong>Search results for: "{{request.GET.q}}"</strong></p>
-            <p>{{posts.count}} results found.</p>
+    {% if request.GET.query %}
+        {% if posts.count %}
+        <div class = "search_message">
+            <span class = "results">These are the search results for: "{{request.GET.query}}"<br></span>
+            <span class = "post_count">{{posts.count}} posts were found.</span>
+            <style>
+                .search_message
+                {
+                    text-align: center;
+                    background-color: #dee7e1;
+                    padding: 15px;
+                    color: rgb(3, 2, 2);
+                    font-weight: bold;
+                }
+            </style>
         </div>
+        {% endif %}
     {% endif %}
     {% if posts %}
     <div class="post-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px;">
         {% for post in posts %}
-            <article class="post content-section" style="border: 2px solid #ccc; padding: 20px; margin-bottom: 20px; border-radius: 5px; background-color: #bfbbb2;">
-                <div class="post-body">
-                    <div class="post-metadate">
-                        <a class="mr-2" href="#">{{post.author.username}}</a>
-                        <small class="text-muted">{{post.date_posted|date:"F d, Y"}}</small>
+            <article class = "content">
+                <style>
+                 article.content
+                 {
+                    border: 2px solid #f0d29cfa;
+                    padding: 20px;
+                    background-color: #f0d29cfa;
+                 }
+                </style>
+                <div class = "body">
+                    <div class = "header_for_posts">
+                        <a class = "mr-2" href = "#">{{post.author.username}}</a>
+                        <small class = "date">{{post.date_posted|date:"F d, Y"}}</small>
                     </div>
-                    <h2 class="post-title"
-                        style=
-                        "
+                    <h2 class = "title">
+                    <style>
+                        .title
+                        {
                             font-size: 2rem;
                             font-weight: bold;
-                            color: #333;
-                            margin-bottom: 10px;
+                            color: #222;
+                            text-decoration: wavy;
                             text-transform: uppercase;
                             letter-spacing: 1px;
                             position: relative;
-                        ">
-                        <a href="{% url 'post-detail' post.id %}" style="color: #333; text-decoration: none; transition: all 0.3s ease-in-out;">
-                            <span style="position: relative;">
-                                <span style="font-size: 1.5rem; color: #db250d; margin-right: 10px;">🌿</span>
-                                {{post.title}}
+                        }
+                    </style>
+                        <a href="{% url 'post-detail' post.id %}" style = "color: #222; text-decoration: wavy;">
+                            <span style = "position: relative; display: flex;">
+                                <span style="margin-right: 10px;">🌿</span> {{post.title}}
                             </span>
                         </a>
                     </h2>
-                    <p class="post-content">{{post.content}}</p>
-                    <p class="post-location"><strong>Location:</strong> {{post.location}}</p>
-                    <p class="post-quantity"><strong>Quantity:</strong> {{post.quantity}}</p>
-                    <p class="post-price"><strong>Price:</strong> ${{ post.price }}</p>
+                    <h3\>
+                        <p class = "Description">{{post.content}}</p>
+                        <p class = "Location"><strong>Location: </strong>{{post.location}}</p>
+                        <p class = "Quantity"><strong>Quantity: </strong>{{post.quantity}}</p>
+                        <p class = "Price"><strong>Price: </strong>{{post.price}}</p>
+                    </h3>
                     {% if post.image %}
-                        <img src="{{post.image.url}}" alt="{{post.title}}" style="max-width: 50px; height: auto">
+                        <img src = "{{post.image.url}}" style = "max-width: 50px">
                     {% endif %}
                 </div>
             </article>    
         {% endfor %}
     </div>
     {% else %}
-        <div class="no-posts-found">
+        <div class = "no_posts_found">
             <strong>No posts were found. Please search for something else!</strong>
         </div>
         <style>
-            .no-posts-found
+            .no_posts_found
             {
                 text-align: center;
+                background-color: #dee7e1;
+                position: relative;
+                font-style: oblique;
+                font-size: 2.5rem;
             }
         </style>
     {% endif %}
