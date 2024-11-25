@@ -57,6 +57,54 @@
                 {% endblock %}
             </div>
         </main>
+
+        <!--Footer Section -->
+        <footer class="bg-green text-white text-center py-4 mt-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo -->
+                    <div class="col-md-3">
+                        <img src="{% static 'bargain_box/BargainBox_logo_white.png' %}" alt="BargainBox" style="max-width: 300px;">
+                    </div>
+                    <!-- My Account Section -->
+                    <div class="col-md-3">
+                        <h5>My Account</h5>
+                        <ul class="list-unstyled">
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'view-profile' %}" class="text-white text-decoration-none">My Profile</a></li>
+                            <li><a href="{% url 'signout' %}" class="text-white text-decoration-none">Sign Out</a></li>
+                            {% else %}
+                            <li><a href="{% url 'register' %}" class="text-white text-decoration-none">Register</a></li>
+                            <li><a href="{% url 'signin' %}" class="text-white text-decoration-none">Sign In</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <!-- About Section -->
+                    <div class="col-md-3">
+                        <h5>About</h5>
+                        <ul>
+                            <li><a>Our Mission</a></li>
+                            <li><a>Meet the Team</a></li>
+                            <li><a>How We Work</a></li>
+                        </ul>
+                    </div>
+                    <!-- Help Section -->
+                    <div class="col-md-3">
+                        <h5>Help</h5>
+                        <ul>
+                            <li><a">FAQ</a></li>
+                            <li><a">How to Price</a></li>
+                            <li><a">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
         {% block script %}
         {% endblock %}
         <!--
