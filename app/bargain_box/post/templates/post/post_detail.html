@@ -21,8 +21,7 @@
     Date posted: {{ post.date_posted }}
 </h2>
 <h2 class="text-center">
-    <!-- by <a href="{% url 'view-profile' %}">{{ post.author }}</a> -->
-    by <a href="#">{{ post.author }}</a>
+    by <a href="{% url 'view-profile-given-user-pk' user_to_view_pk=post.author.pk %}?origin={{request.path}}">{{ post.author }}</a>
 </h2>
 
 {% if post.image %}

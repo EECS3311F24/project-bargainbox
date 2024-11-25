@@ -2,12 +2,19 @@
 
 {% block user_profile_content %}
 <h1>Profile</h1>
-<img class="profile-image" src="{{ user.profile.image.url }}" alt="user profile image">
-<p><label>Username:</label> {{ user.username }}</p>
-<p><label>Email:</label> {{ user.email }}</p>
-<p><label>Account created on:</label> {{ user.date_joined | date:"F j, o @ P e"}}</p>
+<img class="profile-image" src="{{ user_to_view.profile.image.url }}" alt="user profile image">
+<p><label>Biography:</label> {{ user_to_view.profile.biography }}</p>
+<p><label>Username:</label> {{ user_to_view.username }}</p>
+<p><label>Email:</label> {{ user_to_view.email }}</p>
+<p><label>Joined BargainBox on:</label> {{ user_to_view.date_joined | date:"F j, o @ P e"}}</p>
+<p><label>Active listings:</label> {{ user_active_listings }}</p>
 <div class="bb-btn-set">
+    {% if origin_URL != None %}
+    <a class="bb-btn-link bb-btn-green" href="{{ origin_URL }}">Back</a>
+    {% endif %}
+    {% if allow_edit_and_delete %}
     <a class="bb-btn-link bb-btn-green" href="{% url 'edit-profile' %}">Edit</a>
     <a class="bb-btn-link bb-btn-red" href="{% url 'delete-profile' %}">Delete</a>
+    {% endif %}
 </div>
 {% endblock user_profile_content %}

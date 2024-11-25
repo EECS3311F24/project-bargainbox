@@ -12,7 +12,8 @@ class UpdateUserTableForm(forms.ModelForm):
 
 class UpdateProfileTableForm(forms.ModelForm):
     image = forms.ImageField(required=False)
+    biography = forms.Textarea()
 
     class Meta:
         model = Profile
-        fields = ['image']
+        fields = ['image', 'biography']
