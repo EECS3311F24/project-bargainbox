@@ -138,6 +138,12 @@ div.profile {
     width:100%;
 }
 
+.profile textarea {
+    margin-top: 10px;
+    height: 8em;
+    width:100%;
+}
+
 div.bb-btn-set {
     display: flex;
     justify-content: center;
