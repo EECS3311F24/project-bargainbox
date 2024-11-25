@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'user_profile.apps.UserProfileConfig',
     'user_posts.apps.UserPostsConfig',
     'post.apps.PostConfig',
+    'about.apps.AboutConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

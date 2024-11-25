@@ -17,7 +17,7 @@
         </h1>
         <form method= "get" action = "{% url 'home' %}" style = "display: flex; justify-content: center;">
             <input name = "query" type = "text" placeholder = "Type Here to Search for Posts" value = "{{request.GET.query}}" style = "padding: 15px; width: 250px; font-size: 1rem;"/>
-            <button type = "submit" style = "padding: 10px; background-color: rgb(222, 20, 20); color: rgb(247, 247, 244); cursor: pointer;"> Search </button>
+            <button type = "submit" style = "padding: 10px; background-color: blue; color: rgb(247, 247, 244); cursor: pointer;"> Search </button>
         </form>
     </div>
     {% if request.GET.query %}
