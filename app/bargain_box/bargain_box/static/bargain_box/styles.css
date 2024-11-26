@@ -138,32 +138,76 @@ div.profile {
     width:100%;
 }
 
+.profile textarea {
+    margin-top: 10px;
+    height: 8em;
+    width:100%;
+}
+
 div.bb-btn-set {
     display: flex;
     justify-content: center;
 }
 
 /* Bottom Navigation Bar */
-.navbar-bottom {
-    background-color: #32612d; /* New color */
+/* Footer Section Styling */
+footer {
+    background-color: #32612d; /* Matches navbar color */
     color: #ffffff;
-    padding: 20px 0;
+    padding: 40px 20px;
     width: 100%;
-    text-align: left;
     position: relative;
+    text-align: left;
 }
-.navbar-bottom .nav-links {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
+
+footer h5 {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #bcbcbc;
+    padding-bottom: 5px;
 }
-.navbar-bottom .nav-links div {
-    flex: 1;
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
 }
-.navbar-bottom .nav-links a {
-    color: #00171F;
+
+footer ul li {
+    margin: 10px 0;
+}
+
+footer ul li a {
+    color: #b3e8b1; /* Subtle green for links */
     text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer .footer-logo img {
+    max-width: 150px;
     display: block;
+    margin: 0 auto 15px auto;
+}
+
+footer .row > div {
+    margin-bottom: 20px;
+}
+
+/* Footer Responsive Design */
+@media (max-width: 768px) {
+    footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer ul {
+        text-align: center;
+    }
 }
 
 /* Categories Page Content */

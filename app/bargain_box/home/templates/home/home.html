@@ -17,7 +17,7 @@
         </h1>
         <form method= "get" action = "{% url 'home' %}" style = "display: flex; justify-content: center;">
             <input name = "query" type = "text" placeholder = "Type Here to Search for Posts" value = "{{request.GET.query}}" style = "padding: 15px; width: 250px; font-size: 1rem;"/>
-            <button type = "submit" style = "padding: 10px; background-color: rgb(222, 20, 20); color: rgb(247, 247, 244); cursor: pointer;"> Search </button>
+            <button type = "submit" style = "padding: 10px; background-color: blue; color: rgb(247, 247, 244); cursor: pointer;"> Search </button>
         </form>
     </div>
     {% if request.GET.query %}
@@ -50,10 +50,10 @@
                     background-color: #f0d29cfa;
                  }
                 </style>
-                <div class = "body">
-                    <div class = "header_for_posts">
-                        <a class = "mr-2" href = "#">{{post.author.username}}</a>
-                        <small class = "date">{{post.date_posted|date:"F d, Y"}}</small>
+                <div class="body">
+                    <div class="header_for_posts">
+                        <a class="mr-2" href="{% url 'view-profile-given-user-pk' user_to_view_pk=post.author.pk %}?origin={{request.path}}">{{post.author.username}}</a>
+                        <small class="date">{{post.date_posted|date:"F d, Y"}}</small>
                     </div>
                     <h2 class = "title">
                     <style>

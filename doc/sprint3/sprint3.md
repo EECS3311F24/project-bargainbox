@@ -52,17 +52,18 @@ The following were the goals of the meeting held on November 19th, 2024:
 
 1. Arjun Grewal
    - Add/remove bookmark
+   - PB.md
 
 2. Annie Jhamb
    - View 10 listings per page
    - sprint3.md, SR2.md, System Architecture Diagram 
 
 3. Jasmin Slootweg
-   - 
+   - Global footer
 
 4. Michael Favret
    - View a seller's profile
-   - PB.md
+   - PB.md, demo video
 
 5. Quoc Trong Dao
    - Add/remove bookmark

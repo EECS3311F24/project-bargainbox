@@ -40,6 +40,8 @@ urlpatterns = [
     path('profile/', include('user_profile.urls')),
     path('my-posts/', include('user_posts.urls')),
     
+    path('about/', include('about.urls')),
+    
     path('admin/', admin.site.urls, name = 'admin')
 ]
 
