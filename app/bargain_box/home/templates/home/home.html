@@ -51,8 +51,8 @@
                  }
                 </style>
                 <div class="body">
-                    <div class="header_for_posts">
-                        <a class="mr-2" href="{% url 'view-profile-given-user-pk' user_to_view_pk=post.author.pk %}?origin={{request.path}}">{{post.author.username}}</a>
+                    <div class="posted-by">
+                        <a class="mr-2" href="{% url 'view-profile-given-user-pk' user_to_view_pk=post.author.pk %}?origin={{request.path}}"><img class="profile-image" src="{{ post.author.profile.image.url }}" alt="user profile image">{{post.author.username}}</a>
                         <small class="date">{{post.date_posted|date:"F d, Y"}}</small>
                     </div>
                     <h2 class = "title">
@@ -66,6 +66,7 @@
                             text-transform: uppercase;
                             letter-spacing: 1px;
                             position: relative;
+                            margin: 0.4em 0em;
                         }
                     </style>
                         <a href="{% url 'post-detail' post.id %}" style = "color: #222; text-decoration: wavy;">

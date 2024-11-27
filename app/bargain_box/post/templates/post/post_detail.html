@@ -16,14 +16,12 @@
         <span style="font-size:0.5em"><a href="{% url 'post-edit' pk=post.pk %}">Edit</a></span>
     </h1>
 </div>
-
 <h2 class="text-center">
-    Date posted: {{ post.date_posted }}
+    Date posted: {{ post.date_posted }} UTC
 </h2>
-<h2 class="text-center">
-    by <a href="{% url 'view-profile-given-user-pk' user_to_view_pk=post.author.pk %}?origin={{request.path}}">{{ post.author }}</a>
+<h2 class="text-center posted-by">
+    Seller: <a href="{% url 'view-profile-given-user-pk' user_to_view_pk=post.author.pk %}?origin={{request.path}}"><img class="profile-image" src="{{ post.author.profile.image.url }}" alt="user profile image">{{post.author.username}}</a>
 </h2>
-
 {% if post.image %}
     <div class="text-center">
         <a href="{{ post.image.url }}">
