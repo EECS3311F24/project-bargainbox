@@ -42,6 +42,7 @@ class PostListView(ListView):
     template_name = 'home/home.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
+    paginate_by = 10
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -51,13 +52,13 @@ class PostListView(ListView):
                 Q(title__icontains=search_query) |
                 Q(location__icontains=search_query)
             )
-        return queryset
+        return queryset        
 
 # this is our class based view for detailed view of an individual post
 class PostDetailView(DetailView):
     model = Post
     template_name = "post/post_detail.html"
-
+ 
 
 # this is our class based view for creating a post
 class PostCreateView(LoginRequiredMixin, CreateView):

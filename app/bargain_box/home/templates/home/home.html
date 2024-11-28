@@ -39,7 +39,7 @@
         {% endif %}
     {% endif %}
     {% if posts %}
-    <div class="post-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px;">
+    <div class="post-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 20px;">
         {% for post in posts %}
             <article class = "content">
                 <style>
@@ -51,8 +51,8 @@
                  }
                 </style>
                 <div class="body">
-                    <div class="header_for_posts">
-                        <a class="mr-2" href="{% url 'view-profile-given-user-pk' user_to_view_pk=post.author.pk %}?origin={{request.path}}">{{post.author.username}}</a>
+                    <div class="posted-by">
+                        <a class="mr-2" href="{% url 'view-profile-given-user-pk' user_to_view_pk=post.author.pk %}?origin={{request.path}}"><img class="profile-image" src="{{ post.author.profile.image.url }}" alt="user profile image">{{post.author.username}}</a>
                         <small class="date">{{post.date_posted|date:"F d, Y"}}</small>
                     </div>
                     <h2 class = "title">
@@ -66,6 +66,7 @@
                             text-transform: uppercase;
                             letter-spacing: 1px;
                             position: relative;
+                            margin: 0.4em 0em;
                         }
                     </style>
                         <a href="{% url 'post-detail' post.id %}" style = "color: #222; text-decoration: wavy;">
@@ -86,7 +87,92 @@
                 </div>
             </article>    
         {% endfor %}
-    </div>
+
+        <div class="pagination-container">
+            <style>
+                /* Pagination Container */
+                .pagination-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin: 20px 0;
+                }
+        
+                .pagination-wrapper {
+                    display: flex;
+                    gap: 8px; /* Space between pagination items */
+                }
+        
+                .pagination-wrapper a {
+                    display: inline-block;
+                    padding: 8px 12px;
+                    text-decoration: none;
+                    color: #007bff;
+                    background-color: #f8f9fa;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+                }
+        
+                .pagination-wrapper a.active {
+                    color: #fff;
+                    background-color: #007bff;
+                    border-color: #007bff;
+                    pointer-events: none;
+                    font-weight: bold;
+                }
+        
+                .pagination-wrapper a:hover {
+                    color: #0056b3;
+                    background-color: #e9ecef;
+                    border-color: #adb5bd;
+                }
+        
+                .pagination-wrapper a.disabled {
+                    color: #6c757d;
+                    background-color: #f8f9fa;
+                    border-color: #ddd;
+                    pointer-events: none;
+                    cursor: not-allowed;
+                }
+        
+                @media (max-width: 576px) {
+                    .pagination-wrapper a {
+                        padding: 6px 10px;
+                        font-size: 12px;
+                    }
+                }
+            </style>
+        
+            <div class="pagination-wrapper">
+                {% if is_paginated %}
+                    <!-- Display First and Previous only if not on the first page -->
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1">First</a>
+                        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    {% endif %}
+        
+                    <!-- Display current and nearby pages -->
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if page_obj.number == num %}
+                            <a class="active">{{ num }}</a>
+                        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                            <a href="?page={{ num }}">{{ num }}</a>
+                        {% endif %}
+                    {% endfor %}
+        
+                    <!-- Display Next and Last only if there are more pages -->
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+        
     {% else %}
         <div class = "no_posts_found">
             <strong>No posts were found. Please search for something else!</strong>

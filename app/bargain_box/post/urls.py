@@ -13,7 +13,6 @@ urlpatterns = [
     path('<int:post_id>/remove-bookmark/', RemovingBookmarkView.as_view(), name = 'removing_bookmark'),
     path('bookmarks/', BookmarkView.as_view(), name = 'bookmarked_posts'),
     
-
     path('new/', PostCreateView.as_view(), name = 'post-create'), # added for post creation view
     path('view/<int:pk>/', PostDetailView.as_view(), name = 'post-detail'), # added for detailed view
     path('edit/<int:pk>/', PostUpdateView.as_view(), name = 'post-edit'), # added for edit view
