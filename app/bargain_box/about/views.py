@@ -5,3 +5,6 @@ def meet_the_team(request):
 
 def how_we_work(request):
     return render(request, 'about/how_we_work.html')
+
+def our_mission(request):
+    return render(request, 'about/our_mission.html')
