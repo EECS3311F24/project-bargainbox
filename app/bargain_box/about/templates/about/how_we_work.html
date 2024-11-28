@@ -1,0 +1,37 @@
+{% extends "home/foundation.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Hero Section -->
+    <div class="hero-image position-relative text-center text-white">
+        <img src="{% static 'about/bannerimage.jpg' %}" alt="How We Work Hero Image" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;">
+        <h6 style="color: black; font-size: xx-small;">Images by Freepik</h6>
+        <div class="position-absolute start-50 top-50 translate-middle-x text-uppercase fw-bold" style="background-color: rgba(38, 90, 156, 0.699); padding: 20px; border-radius: 10px;">
+            <h1 class="m-0" style="color: black;">How We Work</h1>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="row align-items-center mt-5">
+        <div class="col-md-6">
+            <h2 class="mb-4">Our Process</h2>
+            <p>
+                Welcome to BargainBox! Our platform is designed to connect people looking to buy or sell items at unbeatable prices. 
+                Here's how it works:
+            </p>
+            <ul>
+                <li>Post your items for sale with just a few clicks.</li>
+                <li>Discover amazing bargains from sellers in your community.</li>
+                <li>Chat securely through our platform to finalize the deal.</li>
+            </ul>
+            <p>
+                Whether you're decluttering your home or hunting for a bargain, our intuitive design and secure tools ensure a seamless experience.
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'about/howwework.jpg' %}" alt="Our Process" class="img-fluid rounded shadow" style="max-width: 450px;">
+        </div>
+    </div>
+</div>
+{% endblock %}
