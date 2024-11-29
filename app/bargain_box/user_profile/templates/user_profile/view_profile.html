@@ -15,6 +15,7 @@
     {% if allow_edit_and_delete %}
     <a class="bb-btn-link bb-btn-green" href="{% url 'edit-profile' %}">Edit</a>
     <a class="bb-btn-link bb-btn-red" href="{% url 'delete-profile' %}">Delete</a>
+    <a class="bb-btn-link bb-btn-red" href="{% url 'password_reset' %}">Reset password</a>
     {% endif %}
 </div>
 {% endblock user_profile_content %}
