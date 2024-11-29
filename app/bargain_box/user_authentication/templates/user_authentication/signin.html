@@ -12,6 +12,8 @@
     </div>
 </form>
 <div class="bb-btn-set">
-    <small class="text-muted">Don't have a BargainBox account? <a class = "ml-2" href="{% url 'register' %}">Register</a> instead.</small>
+    <small class="text-muted">Don't have a BargainBox account? <a class = "ml-2" href="{% url 'register' %}">Register</a> instead.
+    <a class = "ml-2" href="{% url 'password_reset' %}">Forgot password?</a>
+    </small>
 </div>
 {% endblock user_profile_content %}

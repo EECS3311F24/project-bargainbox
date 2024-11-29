@@ -12,12 +12,14 @@ from django.shortcuts import get_object_or_404
 from django.shortcuts import redirect
 from django.views import View
 
+from django.urls import reverse_lazy
+
 # classes created for the add bookmark view
 class AddingBookmarkView(LoginRequiredMixin, View):
     def post(self, request, post_id):
         bookmark = get_object_or_404(Post, id = post_id)
         bookmark.bookmarks.add(request.user)
-        return redirect('post-detail', pk = post_id)
+        return redirect('home')
 
 # class based view created for listing all bookmarked posts by a user
 class BookmarkView(LoginRequiredMixin, ListView):
@@ -33,8 +35,10 @@ class BookmarkView(LoginRequiredMixin, ListView):
 
 # created for remove bookmark view for Timothy when you are working on this part
 class RemovingBookmarkView(LoginRequiredMixin, View):
-    def post(self):
-        return
+    def post(self, request, post_id):
+        bookmark = get_object_or_404(Post, id=post_id)
+        bookmark.delete()
+        return redirect(reverse_lazy('home')) # Delete first before redirecting
 
 # this is our class based view for listing all posts
 class PostListView(ListView):

@@ -35,6 +35,16 @@ urlpatterns = [
     path('signin/', auth_views.LoginView.as_view(template_name = 'user_authentication/signin.html'), name = 'signin'),
     path("signout/", user_authentication_views.user_account_signout, name = 'signout'),
 
+    path("password-reset/", user_authentication_views.PasswordResetView.as_view(), name = 'password_reset'),
+    path("password-reset/email-sent",
+         user_authentication_views.PasswordResetEmailSentView.as_view(),
+         name = 'password_reset_done'),
+    path("password-reset-confirm/<uidb64>/<token>/",
+         user_authentication_views.PasswordResetConfirmView.as_view(),
+         name = 'password_reset_confirm'),
+    path("password-reset-complete",
+         user_authentication_views.PasswordResetConfirmView.as_view(), name = 'password_reset_complete'),
+
     path('post/', include("post.urls")),
     
     path('profile/', include('user_profile.urls')),
