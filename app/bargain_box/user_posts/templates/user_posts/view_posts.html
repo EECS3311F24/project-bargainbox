@@ -1,0 +1,49 @@
+{% extends "home/foundation.html" %}
+
+{% block content %}
+<div class="container content-section">
+    {% if user_posts %}
+        <h1 class="text-center display-4">Here are your listings!</h1>
+        
+        <div class="row">
+            {% for post in user_posts %}
+                <div class="col-md-6 mb-4">
+                    <div class="card" style="background-color: rgb(255, 255, 255);">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a>
+                            </h3>
+                            <p class="card-text"><strong>Date posted:</strong> {{ post.date_posted }}</p>
+                            <p class="card-text"><strong>Location:</strong> {{ post.location }}</p>
+                            <p class="card-text"><strong>Quantity:</strong> {{ post.quantity }}</p>
+                            <p class="card-text"><strong>Price:</strong> ${{ post.price }}</p>
+                            
+                            {% if post.image %}
+                                <div class="text-center mb-2">
+                                    <a href="{% url 'post-detail' post.pk %}">
+                                        <img src="{{ post.image.url }}" 
+                                             alt="{{ post.title }}" 
+                                             class="img-fluid" 
+                                             style="max-width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                            {% endif %}
+                            
+                            <div class="text-center">
+                                <a href="{% url 'post-edit' post.pk %}" class="btn btn-primary btn-sm">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    
+    {% else %}
+        <!-- Message when no posts are available -->
+        <div class="content-section text-center">
+            <h1>Sorry, you haven't made any listings yet!</h1>
+            <a href="{% url 'post-create' %}" class="btn btn-success mt-3">Make a Listing</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock content %}

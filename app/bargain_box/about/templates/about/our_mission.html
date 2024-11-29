@@ -1,0 +1,55 @@
+{% extends "home/foundation.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="hero-image position-relative text-center text-white">
+        <img src="{% static 'about/bannerimage2.jpg' %}" alt="Our Mission Hero Image" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;">
+        <div class="position-absolute start-50 top-50 translate-middle-x text-uppercase fw-bold" style="background-color: rgba(255, 255, 255, 0.5); padding: 20px; border-radius: 10px;">
+            <h1 class="m-0" style="color: black; padding: 10px 20px; border-radius: 5px;">Our Mission</h1>
+            <h6 style="font-size: xx-small;">Images from freepik</h6>
+        </div>
+    </div>
+
+    <div class="row align-items-center mt-5">
+        <div class="col text-center">
+            <h2 class="mb-4">Sustainable Consumer Consumption</h2>
+            <p style="font-size: 1.2rem;">
+                In an age where consumerism is growing and the environment is dying, our mission is clear: to encourage sustainable consumer practices.
+                BargainBox aims to create a platform where items are given a second life, reducing waste and promoting a circular economy. 
+                Together, we can make a difference — one transaction at a time.
+            </p>
+            
+             <div style="background-color: rgba(158, 174, 165, 0.679);">
+                <h3 class="mt-5">Why Tackle Consumerism?</h3>
+                <p style="font-size: 1.2rem;">
+                    A 2015 study found that the production and use of household goods and services was responsible for 60 percent of global greenhouse gas emissions. 
+                    Not surprisingly, wealthy countries have the most per capita impact. This is because 45 percent of global greenhouse gas emissions comes solely from 
+                    the production of the things we use and buy every day. While large oil companies like ExxonMobil, Shell, BP, and Chevron are the biggest emitters of greenhouse gas emissions, 
+                    we consumers are complicit. We demand the products and energy made from the fossil fuels they provide. One scientist found that 90 percent of fossil fuel companies’ emissions 
+                    are a result of the products made from fossil fuels.
+                    
+                </p>
+                <p><a href="https://news.climate.columbia.edu/2020/12/16/buying-stuff-drives-climate-change/#:~:text=In%20fact%2C%20our%20consumer%20habits,the%20most%20per%20capita%20impact." target="_blank" class="text-decoration-none">
+                    [Source: Columbia Climate School]
+                </a></p>
+             </div>
+
+            <h3 class="mt-5">Thrifting and Buying Second-Hand Items Can Make a Significant Impact</h3>
+            <p style="font-size: 1.2rem;">
+                Thrifting and buying second-hand items have tangible benefits for the environment:
+            </p>
+            <ul class="text-start" style="font-size: 1.2rem; padding-left: 20px;">
+                <li><strong>Less clothing in landfills:</strong> Most clothes are made from synthetic materials, which take hundreds of years to decompose. Thrifting extends the life of clothes, reducing landfill waste.</li>
+                <li><strong>Fewer wasted resources:</strong> Manufacturing clothes requires significant water resources. For example, one pair of jeans uses approximately 1,800 gallons of water in production. Thrifting helps decrease demand for new items, conserving resources.</li>
+                <li><strong>Reduced chemical pollution:</strong> Cotton production is pesticide-intensive, and textile manufacturing involves harmful dyes and crude oil by-products. Thrifting limits the environmental risks associated with these processes.</li>
+            </ul>
+            <p>
+                <a href="https://www.colorado.edu/ecenter/2023/12/15/sustainable-guide-thrifting" target="_blank" class="text-decoration-none">
+                    [Source: Environmental Center, University of Colorado Boulder]
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

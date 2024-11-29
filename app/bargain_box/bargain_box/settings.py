@@ -11,12 +11,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Required for adding pictures to posts
-import os
+# Required for adding images to posts and user profiles
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -37,10 +37,12 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'home.apps.HomeConfig',
-    'users.apps.UsersConfig',
+    'user_registration.apps.UserRegistrationConfig',
     'user_authentication.apps.UserAuthenticationConfig',
     'user_profile.apps.UserProfileConfig',
+    'user_posts.apps.UserPostsConfig',
     'post.apps.PostConfig',
+    'about.apps.AboutConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

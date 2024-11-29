@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="{% static 'bargain_box/favicon.ico' %}">
 
         <link rel="stylesheet" href="{% static 'bargain_box/styles.css' %}">
 
@@ -25,13 +26,14 @@
                     </a>
                     <div class="nav-links">
                         <ul>
-                            <li><a href="#">Categories</a></li>
                             <li><a href="{% url 'post-create' %}">Post</a></li>
                             {% if user.is_authenticated %}
+                            <li><a href="{% url 'bookmarked_posts' %}">Bookmarked Posts</a></li> <!--Added for bookmarks-->
+                            <li><a href="{% url 'view-posts' %}">My listings</a></li>
                             <li><a href="{% url 'view-profile' %}">My profile</a></li>
-                            <li><a href="{% url 'signout' %}">Sign Out</a></li>
+                            <li><a href="{% url 'signout' %}">Sign out</a></li>
                             {% else %}
-                            <li><a href="{% url 'signin' %}">Sign In</a></li>
+                            <li><a href="{% url 'signin' %}">Sign in</a></li>
                             <li><a href="{% url 'register' %}">Register</a></li>
                             {% endif %}
                         </ul>
@@ -53,18 +55,53 @@
                 {% endblock %}
             </div>
         </main>
-        <!--
-        <footer>
 
-            <h2>Footer placeholder</h2>
-
+        <!--Footer Section -->
+        <footer class="bg-green text-white text-center py-4 mt-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo -->
+                    <div class="col-md-3">
+                        <img src="{% static 'bargain_box/BargainBox_logo_white.png' %}" alt="BargainBox" style="max-width: 300px;">
+                    </div>
+                    <!-- My Account Section -->
+                    <div class="col-md-3">
+                        <h5>My Account</h5>
+                        <ul class="list-unstyled">
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'view-profile' %}" class="text-white text-decoration-none">My Profile</a></li>
+                            <li><a href="{% url 'signout' %}" class="text-white text-decoration-none">Sign Out</a></li>
+                            {% else %}
+                            <li><a href="{% url 'register' %}" class="text-white text-decoration-none">Register</a></li>
+                            <li><a href="{% url 'signin' %}" class="text-white text-decoration-none">Sign In</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <!-- About Section -->
+                    <div class="col-md-3">
+                        <h5>About</h5>
+                        <ul>
+                            <li><a href="{% url 'our_mission' %}" class="text-white text-decoration-none">Our Mission</a></li>
+                            <li><a href="{% url 'meet_the_team' %}" class="text-white text-decoration-none">Meet the Team</a></li>
+                            <li><a href="{% url 'how_we_work' %}" class="text-white text-decoration-none">How We Work</a></li>
+                        </ul>
+                    </div>
+                    <!-- Help Section -->
+                    <div class="col-md-3">
+                        <h5>Help</h5>
+                        <ul>
+                            <li><a">FAQ</a></li>
+                            <li><a">How to Price</a></li>
+                            <li><a">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </footer>
-        -->
-        <!--
-        Import the bootstrap JS code.
-        Note, this is the not bootstrap JS bundle (which includes Popper).
-        Instead, this is the bootstrap JS minimal package, (which does not include Popper).
-        -->
+
+
+        {% block script %}
+        {% endblock %}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     </body>
 </html>

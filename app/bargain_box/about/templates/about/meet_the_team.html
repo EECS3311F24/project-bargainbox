@@ -1,0 +1,42 @@
+{% extends "home/foundation.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Meet the Team</h1>
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-4 text-center">
+            <img src="{% static 'about/teamimage.jpg' %}" alt="Team Member 1" class="img-fluid rounded-circle mb-3" style="max-width: 150px;">
+            <h3>Jasmin</h3>
+            <p><a href="https://www.linkedin.com/in/jasmin-slootweg" target="_blank">LinkedIn</a></p>
+            <p>Jasmin is a Computer Science Student, currently working at the Risk and Insurance Studies Center.</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="{% static 'about/teamimage.jpg' %}" alt="Team Member 2" class="img-fluid rounded-circle mb-3" style="max-width: 150px;">
+            <h3>Arjun</h3>
+            <p><a href="#">LinkedIn</a></p>
+            <p>Arjun is a third year computer science student at York University.</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="{% static 'about/teamimage.jpg' %}" alt="Team Member 3" class="img-fluid rounded-circle mb-3" style="max-width: 150px;">
+            <h3>Michael</h3>
+            <p><a href="#">LinkedIn</a></p>
+            <p>Michael is a computer science student at York University, currently working as a software quality assurance analyst.</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <img src="{% static 'about/teamimage.jpg' %}" alt="Team Member 4" class="img-fluid rounded-circle mb-3" style="max-width: 150px;">
+            <h3>Timothy</h3>
+            <p><a href="#">LinkedIn</a></p>
+            <p>Timothy is a third year computer science student at York University.</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="{% static 'about/teamimage.jpg' %}" alt="Team Member 5" class="img-fluid rounded-circle mb-3" style="max-width: 150px;">
+            <h3>Annie</h3>
+            <p><a href="#">LinkedIn</a></p>
+            <p>Annie is a third year Computer Science student at York University.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

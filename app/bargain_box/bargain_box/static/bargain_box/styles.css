@@ -9,7 +9,7 @@ nav img {
 }
 
 .nav-links ul {
-    list-style-type:circle;
+    list-style-type: circle;
     margin: 0px;
 }
 
@@ -17,7 +17,6 @@ nav img {
     display: inline;
     padding-left: 20px;
     color: #ffffff;
-    
 }
 
 .nav-links a {
@@ -33,9 +32,202 @@ nav img {
 }
 
 main {
-    margin: 12px;
+    margin: 20px;
 }
 
 main h1 {
     text-align: center;
+}
+
+ul.errorlist {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.errorlist li {
+    color: red;
+    font-weight: bold;
+    padding: 0px 20px;
+}
+
+span.helptext {
+    font-size: 0.8em;
+}
+
+.bb-btn {
+    color: #ffffff;
+    font-size: 1.25em;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin: 10px;
+}
+
+.bb-btn-link {
+    color: #ffffff;
+    font-size: 1.25em;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 7px 15px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.bb-btn-green {
+    background: #32612d;
+    border-color: #44943b;
+}
+
+.bb-btn-green:hover {
+    border-color: #32612d;
+    box-shadow: 0px 2px 10px 1px #32612d8f;
+}
+
+.bb-btn-red {
+    background: #990000;
+    border-color: #e42424;
+}
+
+.bb-btn-red:hover {
+    border-color: #990000;
+    box-shadow: 0px 2px 10px 1px #9900008f;
+}
+
+.bb-btn-grey {
+    background: #7a7a7a;
+    border-color: #bcbcbc;
+}
+
+.bb-btn-grey:hover {
+    border-color: #7a7a7a;
+    box-shadow: 0px 2px 10px 1px #5c5c5c8f;
+}
+
+.posted-by img {
+    height: 2.5em;
+    width: 2.5em;
+    box-shadow: 0px 5px 10px 2px #00000033;
+    border-radius: 50%;
+    margin-right: 0.6em;
+}
+
+div.profile {
+    border-radius: 20px;
+    padding: 40px 20px;
+    box-shadow: 0px 5px 10px 5px #00000033;
+}
+
+.profile img {
+    height: 150px;
+    width: 150px;
+    box-shadow: 0px 5px 10px 2px #00000033;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+.profile p {
+    color: black;
+    font-style: normal;
+    font-size: 1.25em;
+    margin: 20px;
+}
+
+.profile label {
+    display: block;
+    color: rgb(86, 85, 85);
+    font-style: italic;
+}
+
+.profile input {
+    margin-top: 10px;
+    width:100%;
+}
+
+.profile textarea {
+    margin-top: 10px;
+    height: 8em;
+    width:100%;
+}
+
+div.bb-btn-set {
+    display: flex;
+    justify-content: center;
+}
+
+/* Bottom Navigation Bar */
+/* Footer Section Styling */
+footer {
+    background-color: #32612d; /* Matches navbar color */
+    color: #ffffff;
+    padding: 40px 20px;
+    width: 100%;
+    position: relative;
+    text-align: left;
+}
+
+footer h5 {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #bcbcbc;
+    padding-bottom: 5px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 10px 0;
+}
+
+footer ul li a {
+    color: #b3e8b1; /* Subtle green for links */
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer .footer-logo img {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+footer .row > div {
+    margin-bottom: 20px;
+}
+
+/* Footer Responsive Design */
+@media (max-width: 768px) {
+    footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer ul {
+        text-align: center;
+    }
+}
+
+/* Categories Page Content */
+.categories-content {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+.categories-content h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
 }

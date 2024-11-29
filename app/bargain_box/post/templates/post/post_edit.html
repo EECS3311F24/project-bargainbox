@@ -2,6 +2,42 @@
 
 
 {% block content %}
-<h1>EDIT MODE</h1>
+<div class="container">
+    <h1 class="text-center display-4">Detailed Listing of <span style="color:red">{{ post.title }}</span></h1>
+</div>
+
+
+<!--Form to Edit the Post -->
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="id_title">Title:</label>
+        {{ form.title }}
+    </div>
+    <div class="form-group">
+        <label for="id_content">Description:</label>
+        {{ form.content }}
+    </div>
+    <div class="form-group">
+        <label for="id_location">Location:</label>
+        {{ form.location }}
+    </div>
+    <div class="form-group">
+        <label for="id_quantity">Quantity:</label>
+        {{ form.quantity }}
+    </div>
+    <div class="form-group">
+        <label for="id_price">Price:</label>
+        {{ form.price }}
+    </div>
+    <div class="form-group">
+        <label for="id_image">Image:</label>
+        {{ form.image }}   
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+<br>
+
 
 {% endblock content %}
