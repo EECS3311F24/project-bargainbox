@@ -33,8 +33,10 @@ class BookmarkView(LoginRequiredMixin, ListView):
 
 # created for remove bookmark view for Timothy when you are working on this part
 class RemovingBookmarkView(LoginRequiredMixin, View):
-    def post(self):
-        return
+    def post(self, request, post_id):
+        bookmark = get_object_or_404(Post, id=post_id)
+        bookmark.delete()
+        return redirect(reverse_lazy('home')) # Delete first before redirecting
 
 # this is our class based view for listing all posts
 class PostListView(ListView):

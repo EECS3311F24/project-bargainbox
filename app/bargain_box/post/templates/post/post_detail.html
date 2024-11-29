@@ -52,6 +52,27 @@
     {% comment %}
     Hey, Timothy, this is where you can add the remove bookmark button
     {% endcomment %}
+
+    {% if user != post.author %}
+        <form action = " {% url 'removing_bookmark' post.id %}" method = "post">
+            {% csrf_token %}
+            <div style = "display: flex; justify-content: center; align-items: center;">
+                <button class = "btn custom" type = "submit">Delete BookMark</button>
+            </div>
+        </form>
+        <style>
+            .custom
+            {
+                background-color: rgb(41, 142, 108);
+                cursor: pointer;
+                border-radius: 10px;
+                font-size: 20px;
+                color: white;
+                justify-content: center;
+            }
+        </style>
+    {% endif %}
+
 {% else %}
     <!--Creates the Add Bookmark button-->
     {% if user.is_authenticated %}
