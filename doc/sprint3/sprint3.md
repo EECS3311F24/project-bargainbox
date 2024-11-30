@@ -51,8 +51,8 @@ The following were the goals of the meeting held on November 19th, 2024:
 *Each member of the team was assigned with specific tasks. Apart from their personal assignments, everyone stepped in to help each other in overcoming any issues. Here's a list of the tasks that each member completed-*
 
 1. Arjun Grewal
-   - Add/remove bookmark
-   - PB.md
+   - Add Bookmark and View all Bookmarked Posts
+   - Update the Product Backlog, create burndown.pdf, monitor progress on trello
 
 2. Annie Jhamb
    - View 10 listings per page
@@ -66,4 +66,5 @@ The following were the goals of the meeting held on November 19th, 2024:
    - PB.md, demo video
 
 5. Quoc Trong Dao
-   - Add/remove bookmark
+   - Remove Bookmark and Reset Password
+   - Update the Product Backlog, create schedule.pdf, monitor progress on trello
