@@ -101,34 +101,32 @@ This user story is acceptable when:
 
 ***
 
-**PLANNED USER STORIES TO BE COMPLETED DURING SPRINT 3**
+**USER STORIES COMPLETED DURING SPRINT 3**
 
+**\[COMPLETE\]**  
 **As a registered user or a non-registered user, I would like to view a seller’s profile.**  
 This user story is acceptable when:  
 1.	A registered user or a non-registered user is able to view a listing in detail.  
 2.	On the detailed listing page, the seller’s name is displayed.  
 3.	The user can click on the seller’s name and be redirected to a page that lists all of the seller’s information, including their name, number of listings, and account creation date.  
 
+**\[COMPLETE\]**  
 **As a registered user or a non-registered user, I would like to have access to a global page footer.**  
 This user story is acceptable when:  
 1.	A registered user or a non-registered user is able to access the BargainBox platform.  
 2.	At the bottom of any given page, the global footer is displayed.  
 3.	The global page footer contains various links to information and resources that may be helpful for BargainBox users.  
 
+**\[COMPLETE\]**  
 **As a registered user, I would like to save/bookmark a listing for later viewing.**  
 This user story is acceptable when:  
-1.	A registered user is able to locate and click the bookmark button on a listing.  
-2.	The listing is saved to the user’s bookmarked listings.  
-3.	The user is able to access a page where all of their bookmarked listings are displayed.
+1. A registered user is able to see an "Add Bookmark" button in the detailed view of a post created by another user.  
+2. Once the "Add Bookmark" button is clicked by the user, it is no longer visible on the detailed view of the post.  
+3. The author of a post is not able to bookmark their own posts.  
+4. Unregistered users do not have the ability to bookmark any posts (and hence the "Add Bookmark" button is not visible to them in the detailed post view).  
+5. A registered user's bookmarked posts are saved within the database, and hence if the user were to logout, then the bookmarked posts are still tracked.  
 
-**As a registered user, I would like to be able to bookmark listings that I am interested in.**  
-This user story is acceptable when:
-1. A registered user is able to see an "Add Bookmark" button in the detailed view of a post created by another user.
-2. Once the "Add Bookmark" button is clicked by the user, it is no longer visible on the detailed view of the post.
-3. The author of a post is not able to bookmark their own posts.
-4. Unregistered users do not have the ability to bookmark any posts (and hence the "Add Bookmark" button is not visible to them in the detailed post view).
-5. A registered user's bookmarked posts are saved within the database, and hence if the user were to logout, then the bookmarked posts are still tracked.
-
+**\[COMPLETE\]**  
 **As a registered user, I would like to be able to view an organized collection of all of my bookmarked listings on a separate tab.**  
 This user story is acceptable when:
 1. A registered user's bookmarked posts can be viewed on a separate tab titled "Bookmarked Posts" which is accessible to signed in users only.
@@ -137,6 +135,7 @@ This user story is acceptable when:
 4. An unregistered user does not have the "Bookmarked Posts" tab visible to them (as this is a feature associated with registered users only).
 5. A registered user is able to click on the title of a Post within the "Bookmarked Posts" tab and be redirected to the "Post Detailed View" page associated with that post. 
 
+**\[COMPLETE\]**  
 **As a registered user, I would like to remove a bookmark from a listing that I have bookmarked.**  
 This user story is acceptable when:
 1. A registered user is able to click on a "Remove Bookmark" button in the "Post Detailed View" page of a post that they have bookmarked, in order to remove a bookmark
@@ -144,21 +143,23 @@ This user story is acceptable when:
 3. Once a bookmark has been removed, this post is no longer visible in the "Bookmarked Posts" tab.
 4. The registered user is able to once again bookmark any posts in which they have removed.
 
+**\[COMPLETE\]**  
 **As a registered user, I would like to be able to view 10 posts per page to reduce scrolling.**
 This user story is acceptable when:
 1. Any user is able to view all posts, however they must click a "next page" button to view the next subset of maximum 10 posts.
 2. When the "next" page button is clicked, the user can also click a "previous page" button to view the previous 10 posts.
 3. The user is still able to see all posts by either clicking the "next page" or "previous page" buttons
 
-***
-
-User stories that make up BargainBox version two, to be completed over the course of sprints four, five, and six. The user sorties below are listed in descending order of priority.  
-
+**\[COMPLETE\]**  
 **As a registered user, I would like to be able to reset my password.**  
 This user story is acceptable when:  
 1. A registered user is able to login to their account and click on the my profile button.  
 2. The user is then able to modify their password to something else.  
 3. The user will no longer we able to log into their account using the previous password (must use the newly created password).  
+
+***
+
+User stories that make up BargainBox version two, to be completed over the course of sprints four, five, and six. The user sorties below are listed in descending order of priority.  
 
 **As a registered user or a non-registered user, I would like to search for listings by entering a string.**  
 This user story is acceptable when:  
