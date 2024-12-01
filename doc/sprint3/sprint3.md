@@ -56,7 +56,7 @@ The following were the goals of the meeting held on November 19th, 2024:
 
 2. Annie Jhamb
    - View 10 listings per page
-   - sprint3.md, SR2.md, System Architecture Diagram 
+   - sprint3.md, SR2.md, System Architecture Diagram, System Design
 
 3. Jasmin Slootweg
    - Global footer
