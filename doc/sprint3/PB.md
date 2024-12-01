@@ -144,7 +144,7 @@ This user story is acceptable when:
 4. The registered user is able to once again bookmark any posts in which they have removed.
 
 **\[COMPLETE\]**  
-**As a registered user, I would like to be able to view 10 posts per page to reduce scrolling.**
+**As a registered user, I would like to be able to view 10 posts per page to reduce scrolling.**  
 This user story is acceptable when:
 1. Any user is able to view all posts, however they must click a "next page" button to view the next subset of maximum 10 posts.
 2. When the "next" page button is clicked, the user can also click a "previous page" button to view the previous 10 posts.
