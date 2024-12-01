@@ -1,9 +1,13 @@
 # System Design Document- Bargain Box (EECS 3311)
 
 Course: EECS 3311  
+
 Professor: Ilir Dema
+
 TA: Basim
+
 Team members: Arjun Grewal, Annie Jhamb, Jasmin Slootweg, Michael Favret, Quoc Trong Dao  
+
 GitHub Repository: [BargainBox Project](https://github.com/EECS3311F24/project-bargainbox)  
 
 ---
