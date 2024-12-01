@@ -60,10 +60,11 @@ The following were the goals of the meeting held on November 19th, 2024:
 
 3. Jasmin Slootweg
    - Global footer
+   - CRC Cards.pdf
 
 4. Michael Favret
    - View a seller's profile
-   - PB.md, demo video
+   - PB.md, README.pdf, demo video
 
 5. Quoc Trong Dao
    - Remove Bookmark and Reset Password
