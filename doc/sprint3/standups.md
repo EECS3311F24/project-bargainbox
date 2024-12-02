@@ -44,10 +44,10 @@ At this time, I have no blockers.
 
 **Jasmin:**  
 **1\.** What did you work on since the last standup?  
-Since the sprint 3 planning meeting, I have begun working on the global page footer. In particular, I have been focusing on formatting, styling, and making the The My Account section dynamic, changing depending on whether the user is signed in or not.  
+Since the sprint 3 planning meeting, I have begun working on the global page footer. In particular, I have been focusing on formatting, styling, and making the My Account section dynamic, changing depending on whether the user is signed in or not.  
 
 **2\.** What do you commit to next?  
-First, I commit to finishing the implementation of the global page footer. After that, I commit to implementing the pages listed under the "About" section in the footer, such that the link actually direct the user to somewhere with useful information.  
+First, I commit to finishing the implementation of the global page footer. After that, I commit to implementing the pages listed under the "About" section in the footer, such that the links actually direct the user to real pages with useful information.  
 
 **3\.** When do you think you’ll be done?  
 At this time, I expect to finish the global page footer by Tuesday, November 26, 2024.  
@@ -113,13 +113,13 @@ At this time, I have no blockers.
 
 **Jasmin:**  
 **1\.** What did you work on since the last standup?  
-Since the last standup meeting, I have finished implementing the global page footer. In particular, I fully implemented the pages listed under the "About" section in the footer. This way, when a user clicks a link in the footer's about section,  they are actually directed to a useful and working page.  
+Since the last standup meeting, I have finished implementing the global page footer. In particular, I fully implemented the logic under the "My account" section. Further, I have begun working on implementing the pages listed under the footer's "About" section.  
 
 **2\.** What do you commit to next?  
-Next, I commit to completing the CRC Cards.pdf document.  
+Next, I commit to completing pages listed under the footer's "About" section. I also commit to begin working on the CRC Cards.pdf document.  
 
 **3\.** When do you think you’ll be done?  
-At this time, I expect to finish the CRC Cards.pdf document Sunday, December 1, 2024.  
+At this time, I expect to finish the pages listed under the footer's "About" section by Thursday, November 28, 2024.  
 
 **4\.** Do you have any blockers?  
 At this time, I have no blockers.  
@@ -182,10 +182,10 @@ At this time, I have no blockers.
 
 **Jasmin:**  
 **1\.** What did you work on since the last standup?  
-Since the last standup meeting, I have begun studying the changes made to our system in this sprint so that I can accurately complete the CRC Cards.pdf document.  
+Since the last standup meeting, I fully implemented all pages listed under the "About" section in the footer. Now, when a user clicks a link in the footer's about section, they are actually directed to a real page. Further, I continued to work on the CRC Cards document.  
 
 **2\.** What do you commit to next?  
-After all changes are noted, I commit to completing the CRC Cards.pdf document.  
+I commit to completing the CRC Cards.pdf document.  
 
 **3\.** When do you think you’ll be done?  
 At this time, I expect to finish the CRC Cards.pdf document by Sunday, December 1, 2024.  
