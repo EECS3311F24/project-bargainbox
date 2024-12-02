@@ -18,17 +18,16 @@ At this time, I have no blockers.
 
 **Arjun:**  
 **1\.** What did you work on since the last standup?  
-Since the sprint 3 planning meeting, I have implemented the save/bookmark a post feature. To make this possible, I updated the post details page to display an "Add Bookmark" button, and I updated the database so that each post can be bookmarked. Further, I have implemented the view saved/bookmarked posts page feature. I took care to ensure both of these features are only accessible to signed in users. I applied some pleasing styles to the home, my bookmarks, and create post pages.  
-
+From the last meeting (sprint 3 planning meeting), I updated the backend/database so that all Posts could be Bookmarked. In addition, I implemented the functionality where only signed in users have the option to Bookmark Posts created by other users. This was accomplished by the creation of an “Add Bookmark” button associated with each Post that is only visible to signed in users who are not the owner of the Post or have not already Bookmarked that Post. Also, I completed the functionality that provides users the ability to view a collection of all of the Posts that they have Bookmarked within a separate tab called “Bookmarked Posts”. Furthermore, I have organized this layout so that Posts in this tab are seen in a grid view with two columns. I also provided access for users to the Detailed Post View page by clicking on the title of a Post within this “Bookmarked Posts” tab. In addition to this, I updated the CSS for each Post on the Homepage, when users are creating Posts, and also after a user searches for Posts by their title or location.  
 
 **2\.** What do you commit to next?  
-Next, I commit to completing the burndown.pdf document alongside continuing to manage our Trello board.  
+I commit to monitoring our project tracking on trello, completing the burndown.pdf document that needs to be submitted, as well as assisting any of my team members if they need any help with any of their programming tasks.  
 
 **3\.** When do you think you’ll be done?  
-At this time, I intend to be finished by Sunday, December 1, 2024.  
+I believe that I will be able to complete this next commitment by Sunday, December 1, 2024.  
 
 **4\.** Do you have any blockers?  
-I currently do not have any blockers.  
+To completely finish the trello tracking and burndown chart, I must wait for our final feature to be completed.  
 
 **Annie:**  
 **1\.** What did you work on since the last standup?  
@@ -45,10 +44,10 @@ At this time, I have no blockers.
 
 **Jasmin:**  
 **1\.** What did you work on since the last standup?  
-Since the sprint 3 planning meeting, I have begun working on the global page footer. In particular, I have been focusing on formatting, styling, and making the The My Account section dynamic, changing depending on whether the user is signed in or not.  
+Since the sprint 3 planning meeting, I have begun working on the global page footer. In particular, I have been focusing on formatting, styling, and making the My Account section dynamic, changing depending on whether the user is signed in or not.  
 
 **2\.** What do you commit to next?  
-First, I commit to finishing the implementation of the global page footer. After that, I commit to implementing the pages listed under the "About" section in the footer, such that the link actually direct the user to somewhere with useful information.  
+First, I commit to finishing the implementation of the global page footer. After that, I commit to implementing the pages listed under the "About" section in the footer, such that the links actually direct the user to real pages with useful information.  
 
 **3\.** When do you think you’ll be done?  
 At this time, I expect to finish the global page footer by Tuesday, November 26, 2024.  
@@ -88,16 +87,16 @@ At this time, I have no blockers.
 
 **Arjun:**  
 **1\.** What did you work on since the last standup?  
-From the last standup, I have fully completed the implementation of the search for posts by title or location functionality. More specifically, a search bar was included at the top of our homepage so that users can look for specific posts based on their “title” and “location”. In addition, I updated the CSS for posts so that they look more visually appealing on the homepage.  
+From the last standup, I have been keeping track of the progress of the tasks that we have been completing in trello. In addition, I have started to work on the burndown.pdf document.  
 
 **2\.** What do you commit to next?  
-I commit to further updating our progress on Trello as well as completing the burndown.pdf document which is required to be completed for this sprint.  
+I commit to continuing to track our progress on trello and also continuing to work on the burndowm.pdf document.  
 
 **3\.** When do you think you’ll be done?  
-I think that I will be able to complete this next commitment (updating our progress on Trello and working on the burndown.pdf document) by Saturday, November 16, 2024.  
+I believe that I will be able to complete this next commitment by Sunday, December 1, 2024.  
 
 **4\.** Do you have any blockers?  
-To completely finish the burndown chart, I must wait for our last feature to be completed (delete post). Otherwise, I have no blockers.  
+To completely finish the trello tracking and burndown chart, I must wait for all of our features to be completed.  
 
 **Annie:**  
 **1\.** What did you work on since the last standup?  
@@ -114,13 +113,13 @@ At this time, I have no blockers.
 
 **Jasmin:**  
 **1\.** What did you work on since the last standup?  
-Since the last standup meeting, I have finished implementing the global page footer. In particular, I fully implemented the pages listed under the "About" section in the footer. This way, when a user clicks a link in the footer's about section,  they are actually directed to a useful and working page.  
+Since the last standup meeting, I have finished implementing the global page footer. In particular, I fully implemented the logic under the "My account" section. Further, I have begun working on implementing the pages listed under the footer's "About" section.  
 
 **2\.** What do you commit to next?  
-Next, I commit to completing the CRC Cards.pdf document.  
+Next, I commit to completing pages listed under the footer's "About" section. I also commit to begin working on the CRC Cards.pdf document.  
 
 **3\.** When do you think you’ll be done?  
-At this time, I expect to finish the CRC Cards.pdf document Sunday, December 1, 2024.  
+At this time, I expect to finish the pages listed under the footer's "About" section by Thursday, November 28, 2024.  
 
 **4\.** Do you have any blockers?  
 At this time, I have no blockers.  
@@ -157,17 +156,16 @@ At this time, I have no blockers.
 
 **Arjun:**  
 **1\.** What did you work on since the last standup?  
-After the last standup, I have continued to work on the burndown.pdf document as well as
-continued to work on trello, and also began recording the information for my portion of the standups document. In addition, I helped Annie with the polishing of the sprint2.md document.  
+After the last standup, I have continued to monitor our progress on trello as well as working on the burndown.pdf document. In addition, I started to record the information for my portion of the standups document.  
 
 **2\.** What do you commit to next?  
-I commit to continuing to monitor and update our progress on Trello with Timothy, as well as completing my responses for the standups.md document that needs to be submitted. I also commit to helping any of my team members if they need any assistance while working on some of the documents that they are completing.  
+I commit to completing the tracking of our progress on trello with Timothy and also finishing the burndown.pdf document. I also commit to completing my responses for the standups.md document as well as helping any of my team members if they need any assistance with completing any of the other documents.  
 
 **3\.** When do you think you’ll be done?  
-I think that I will be able to complete this next commitment (finish updating our progress on Trello, full completion of the burndown.pdf document, and also recording my response for the standups.md document) by Saturday, November 16, 2024.  
+I believe that I will be able to complete this next commitment by Sunday, December 1, 2024.  
 
 **4\.** Do you have any blockers?  
-I currently do not have any blockers as all programming features have been completed.  
+To completely finish the trello tracking and burndown chart I must wait until our last planned feature (the ability for a user to reset their password) to be completed.  
 
 **Annie:**  
 **1\.** What did you work on since the last standup?  
@@ -184,10 +182,10 @@ At this time, I have no blockers.
 
 **Jasmin:**  
 **1\.** What did you work on since the last standup?  
-Since the last standup meeting, I have begun studying the changes made to our system in this sprint so that I can accurately complete the CRC Cards.pdf document.  
+Since the last standup meeting, I fully implemented all pages listed under the "About" section in the footer. Now, when a user clicks a link in the footer's about section, they are actually directed to a real page. Further, I continued to work on the CRC Cards document.  
 
 **2\.** What do you commit to next?  
-After all changes are noted, I commit to completing the CRC Cards.pdf document.  
+I commit to completing the CRC Cards.pdf document.  
 
 **3\.** When do you think you’ll be done?  
 At this time, I expect to finish the CRC Cards.pdf document by Sunday, December 1, 2024.  
